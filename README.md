@@ -1,7 +1,7 @@
 ### Example
 Les données sont dans le dossier /data, et les sorties dans /processed_data
 
-#### Folder (2008 & 2014 & 2020)
+#### Folder (2008 & 2014 & 2020 & 2026)
 ```powershell
 python run_all_parsers.py --input data --format csv --output processed_data/elections_flat.csv
 ```
@@ -20,7 +20,6 @@ python run_all_parsers.py --input data --year all --format parquet
 #### Options
 - `--input` / `--source-dir` : fichier ou dossier d’entrée
 - `--output` : chemin exact du fichier de sortie
-- `--output-dir` : compatibilité legacy, crée `elections_flat.<ext>` dans ce dossier
 - `--format` : `csv` ou `parquet`
 - `--encoding` : encodage des sources, par défaut `latin-1`
 - `--year` / `--years` : `all` par défaut, ou liste séparée par des virgules

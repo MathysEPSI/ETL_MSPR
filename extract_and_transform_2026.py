@@ -1,4 +1,5 @@
 import argparse
+import csv
 from pathlib import Path
 
 import pandas as pd
@@ -16,65 +17,73 @@ BASE_COL_COUNT = 19
 CANDIDATE_COL_COUNT = 13
 
 
-def _pick(series: pd.Series, name: str) -> pd.Series:
-    if name in series.index:
-        return series[name]
-    return pd.Series(pd.NA, index=series.index, dtype="object")
+def _clean(value: str) -> str | None:
+    text = value.strip()
+    return text if text else None
 
 
 def _extract_records(path: Path, tour: int, encoding: str, year: int) -> list[dict[str, object]]:
-    df = pd.read_csv(path, sep=";", encoding=encoding, dtype=str)
-
     records: list[dict[str, object]] = []
-    candidate_slots = max((len(df.columns) - BASE_COL_COUNT) // CANDIDATE_COL_COUNT, 0)
 
-    for _, row in df.iterrows():
-        base = {
-            "annee_election": year,
-            "tour": tour,
-            "code_departement": row.iloc[0],
-            "libelle_departement": row.iloc[1],
-            "code_commune": row.iloc[2],
-            "libelle_commune": row.iloc[3],
-            "code_bureau_vote": row.iloc[4],
-            "inscrits": row.iloc[5],
-            "votants": row.iloc[6],
-            "abstentions": row.iloc[8],
-            "exprimes": row.iloc[10],
-            "blancs": row.iloc[13],
-            "nuls": row.iloc[16],
-        }
+    with path.open("r", encoding=encoding, newline="") as fh:
+        reader = csv.reader(fh, delimiter=";", quotechar='"')
+        header = next(reader, None)
+        if not header:
+            return records
 
-        for slot in range(candidate_slots):
-            offset = BASE_COL_COUNT + slot * CANDIDATE_COL_COUNT
-            if offset + CANDIDATE_COL_COUNT > len(row):
+        candidate_slots = max((len(header) - BASE_COL_COUNT) // CANDIDATE_COL_COUNT, 0)
+
+        for row in reader:
+            if not row:
                 continue
+            if len(row) < BASE_COL_COUNT:
+                row = row + [""] * (BASE_COL_COUNT - len(row))
 
-            candidate = row.iloc[offset : offset + CANDIDATE_COL_COUNT]
-            nom = candidate.iloc[1]
-            prenom = candidate.iloc[2]
-            sexe = candidate.iloc[3]
-            code_nuance = candidate.iloc[4]
-            liste_abbr = candidate.iloc[5]
-            liste_full = candidate.iloc[6]
-            voix = candidate.iloc[7]
+            base = {
+                "annee_election": year,
+                "tour": tour,
+                "code_departement": _clean(row[0]),
+                "libelle_departement": _clean(row[1]),
+                "code_commune": _clean(row[2]),
+                "libelle_commune": _clean(row[3]),
+                "code_bureau_vote": _clean(row[4]),
+                "inscrits": _clean(row[5]),
+                "votants": _clean(row[6]),
+                "abstentions": _clean(row[8]),
+                "exprimes": _clean(row[10]),
+                "blancs": _clean(row[13]),
+                "nuls": _clean(row[16]),
+            }
 
-            liste = liste_full if pd.notna(liste_full) and str(liste_full).strip() else liste_abbr
-            values = [code_nuance, nom, prenom, liste, voix]
-            if not any(pd.notna(v) and str(v).strip() for v in values):
-                continue
+            for slot in range(candidate_slots):
+                offset = BASE_COL_COUNT + slot * CANDIDATE_COL_COUNT
+                block = row[offset : offset + CANDIDATE_COL_COUNT]
+                if len(block) < CANDIDATE_COL_COUNT:
+                    continue
 
-            records.append(
-                {
-                    **base,
-                    "code_nuance": code_nuance,
-                    "sexe": sexe,
-                    "nom": nom,
-                    "prenom": prenom,
-                    "liste": liste,
-                    "voix": voix,
-                }
-            )
+                nom = _clean(block[1])
+                prenom = _clean(block[2])
+                sexe = _clean(block[3])
+                code_nuance = _clean(block[4])
+                liste_abbr = _clean(block[5])
+                liste_full = _clean(block[6])
+                voix = _clean(block[7])
+
+                liste = liste_full if liste_full else liste_abbr
+                if not any((code_nuance, nom, prenom, liste, voix)):
+                    continue
+
+                records.append(
+                    {
+                        **base,
+                        "code_nuance": code_nuance,
+                        "sexe": sexe,
+                        "nom": nom,
+                        "prenom": prenom,
+                        "liste": liste,
+                        "voix": voix,
+                    }
+                )
 
     return records
 

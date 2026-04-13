@@ -11,6 +11,7 @@ from election_etl_common import DEFAULT_ENCODING, DEFAULT_OUTPUT_STEM, finalize_
 from extract_and_transform_2008 import extract_and_process_2008
 from extract_and_transform_2014 import extract_and_process_2014
 from extract_and_transform_2020 import extract_and_process_2020
+from extract_and_transform_2026 import extract_and_process_2026
 
 
 @dataclass(frozen=True)
@@ -32,6 +33,10 @@ def _load_2020(paths: list[Path], encoding: str, year: int) -> pd.DataFrame:
     return extract_and_process_2020(source_t1=str(paths[0]), source_t2=str(paths[1]), encoding=encoding, year=year)
 
 
+def _load_2026(paths: list[Path], encoding: str, year: int) -> pd.DataFrame:
+    return extract_and_process_2026(source_t1=str(paths[0]), source_t2=str(paths[1]), encoding=encoding, year=year)
+
+
 YEAR_SPECS: tuple[YearSpec, ...] = (
     YearSpec(year=2008, source_names=("MN08_BVot_T1T2.txt",), loader=_load_2008),
     YearSpec(year=2014, source_names=("MN14_Bvot_T1T2.txt",), loader=_load_2014),
@@ -42,6 +47,14 @@ YEAR_SPECS: tuple[YearSpec, ...] = (
             "resultats-par-niveau-burvot-t2-france-entiere.txt",
         ),
         loader=_load_2020,
+    ),
+    YearSpec(
+        year=2026,
+        source_names=(
+            "municipales-2026-resultats-bv-par-communes-2026-03-20.csv",
+            "municipales-2026-resultats-bureau-de-vote-2026-03-23-16h15.csv",
+        ),
+        loader=_load_2026,
     ),
 )
 
