@@ -1,0 +1,9 @@
+# Datas
+data/
+processed_data/
+
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
