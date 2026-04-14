@@ -106,4 +106,3 @@ def write_output_frame(df: pd.DataFrame, output_path: str | Path, file_format: s
         df.to_csv(path, sep=";", index=False, encoding=encoding, decimal=".")
     else:
         df.to_parquet(path, index=False)
-

@@ -7,11 +7,11 @@ from typing import Callable
 
 import pandas as pd
 
-from election_etl_common import DEFAULT_ENCODING, DEFAULT_OUTPUT_STEM, finalize_output_frame, write_output_frame
-from extract_and_transform_2008 import extract_and_process_2008
-from extract_and_transform_2014 import extract_and_process_2014
-from extract_and_transform_2020 import extract_and_process_2020
-from extract_and_transform_2026 import extract_and_process_2026
+from src.preprocessing.election_etl_common import DEFAULT_ENCODING, DEFAULT_OUTPUT_STEM, finalize_output_frame, write_output_frame
+from src.preprocessing.extract_and_transform_2008 import extract_and_process_2008
+from src.preprocessing.extract_and_transform_2014 import extract_and_process_2014
+from src.preprocessing.extract_and_transform_2020 import extract_and_process_2020
+from src.preprocessing.extract_and_transform_2026 import extract_and_process_2026
 
 
 @dataclass(frozen=True)
