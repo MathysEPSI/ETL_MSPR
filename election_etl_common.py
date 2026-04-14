@@ -76,9 +76,28 @@ def percent(numerator: pd.Series, denominator: pd.Series) -> pd.Series:
 
 
 def normalize_code(series: pd.Series, width: int) -> pd.Series:
-    values = series.astype(str).str.strip()
-    numeric_mask = values.str.fullmatch(r"\d+")
-    return values.where(~numeric_mask, values.str.zfill(width))
+    values = series.astype("string").str.strip()
+    missing_mask = values.isna() | values.eq("") | values.str.upper().isin({"NA", "NAN", "NONE"})
+    numeric_mask = values.str.fullmatch(r"\d+").fillna(False)
+    normalized = values.where(~numeric_mask, values.str.zfill(width))
+    return normalized.mask(missing_mask)
+
+
+def normalize_code_nuance(series: pd.Series) -> pd.Series:
+    values = series.astype("string").str.strip()
+    missing_mask = values.isna() | values.eq("") | values.str.upper().isin({"NA", "NAN", "NONE"})
+    return values.mask(missing_mask, "NC")
+
+
+def normalize_commune_code(code_departement: pd.Series, code_commune: pd.Series) -> pd.Series:
+    dept = normalize_code(code_departement, width=2)
+    commune = code_commune.astype("string").str.strip()
+    missing_mask = commune.isna() | commune.eq("") | commune.str.upper().isin({"NA", "NAN", "NONE"})
+    numeric_mask = commune.str.fullmatch(r"\d+").fillna(False)
+    short_numeric_mask = numeric_mask & commune.str.len().le(3)
+
+    composite = commune.where(~short_numeric_mask, dept + commune.str.zfill(3))
+    return composite.mask(missing_mask)
 
 
 def finalize_output_frame(df: pd.DataFrame) -> pd.DataFrame:
@@ -86,6 +105,10 @@ def finalize_output_frame(df: pd.DataFrame) -> pd.DataFrame:
     for column in OUTPUT_COLUMNS:
         if column not in frame.columns:
             frame[column] = pd.NA
+
+    frame["code_departement"] = normalize_code(frame["code_departement"], width=2)
+    frame["code_commune"] = normalize_commune_code(frame["code_departement"], frame["code_commune"])
+    frame["code_nuance"] = normalize_code_nuance(frame["code_nuance"])
 
     frame = frame.reindex(columns=OUTPUT_COLUMNS)
 
