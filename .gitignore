@@ -1,8 +1,10 @@
 # Datas
-data/
-processed_data/
+data/*
+!data/.gitkeep
+processed_data/*
+!processed_data/.gitkeep
 
-# Python
+# Python & JetBrains
 __pycache__/
 *.pyc
 .env
