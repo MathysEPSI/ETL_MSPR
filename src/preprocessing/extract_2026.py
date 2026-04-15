@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from election_etl_common import (
+from .common import (
     DEFAULT_ENCODING,
     finalize_output_frame,
     normalize_code,
@@ -144,4 +144,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 

@@ -287,3 +287,4 @@ def validate_star_schema(tables: dict[str, pd.DataFrame]) -> None:
         if bool(invalid_logic.fillna(False).any()):
             raise ValueError("Incoherence metrique detectee dans fact_resultats_votes")
 
+

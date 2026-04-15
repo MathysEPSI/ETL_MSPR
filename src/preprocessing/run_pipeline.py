@@ -7,17 +7,17 @@ from typing import Callable
 
 import pandas as pd
 
-from election_etl_common import (
+from .common import (
     DEFAULT_ENCODING,
     DEFAULT_OUTPUT_STEM,
     filter_common_communes,
     finalize_output_frame,
     write_output_frame,
 )
-from extract_and_transform_2008 import extract_and_process_2008
-from extract_and_transform_2014 import extract_and_process_2014
-from extract_and_transform_2020 import extract_and_process_2020
-from extract_and_transform_2026 import extract_and_process_2026
+from .extract_2008 import extract_and_process_2008
+from .extract_2014 import extract_and_process_2014
+from .extract_2020 import extract_and_process_2020
+from .extract_2026 import extract_and_process_2026
 
 
 @dataclass(frozen=True)
@@ -226,3 +226,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

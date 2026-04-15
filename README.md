@@ -3,18 +3,18 @@ Les données sont dans le dossier /data, et les sorties dans /processed_data
 
 #### Folder (2008 & 2014 & 2020 & 2026)
 ```powershell
-python run_all_parsers.py --input data --format csv --output processed_data/elections_flat.csv
+python -m src.preprocessing.run_pipeline --input data --format csv --output processed_data/elections_flat.csv
 ```
 
 #### Single file #1
 ```powershell
-python run_all_parsers.py --input data\MN14_Bvot_T1T2.txt --format parquet --output processed_data/mn14_flat.parquet
+python -m src.preprocessing.run_pipeline --input data\MN14_Bvot_T1T2.txt --format parquet --output processed_data/mn14_flat.parquet
 ```
 
 #### Single file #2
 ```powershell
-python run_all_parsers.py --input data --year 2008,2014 --format csv
-python run_all_parsers.py --input data --year all --format parquet
+python -m src.preprocessing.run_pipeline --input data --year 2008,2014 --format csv
+python -m src.preprocessing.run_pipeline --input data --year all --format parquet
 ```
 
 #### Options
@@ -47,23 +47,20 @@ Tables générées :
 
 Grain de la fact : 1 ligne = 1 candidat dans 1 bureau de vote, pour 1 tour et 1 annee.
 
-### Export CSV des tables BI
+### Export CSV des tables du modele en etoile
 ```powershell
-python build_bi_model.py --input processed_data/elections_flat.csv --output-dir processed_data/bi_model --export csv
+python -m src.starschema.build_star_schema --input processed_data/elections_flat.csv --output-dir processed_data/star_schema --export csv
 ```
 
 ### Usage en DataFrames pandas (insertion BDD directe)
 ```python
 import pandas as pd
 
-from bi_model import build_star_schema, export_tables_dataframes
+from src.starschema.star_schema import build_star_schema, export_tables_dataframes
 
 flat = pd.read_csv("processed_data/elections_flat.csv", sep=";", dtype="string")
 tables = build_star_schema(flat)
 tables_df = export_tables_dataframes(tables)
-
-# Exemple: insertion SQL (a adapter a votre moteur)
-# tables_df["dim_geographie"].to_sql("dim_geographie", engine, if_exists="replace", index=False)
 ```
 
 ### Ajouter d'autres datasets analytiques (cle geographique)
@@ -76,7 +73,7 @@ Exemple minimal:
 ```python
 import pandas as pd
 
-from bi_model import GeoJoinConfig, build_star_schema, register_geo_metrics_dataset
+from src.starschema.star_schema import GeoJoinConfig, build_star_schema, register_geo_metrics_dataset
 
 flat = pd.read_csv("processed_data/elections_flat.csv", sep=";", dtype="string")
 tables = build_star_schema(flat)
