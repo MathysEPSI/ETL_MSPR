@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from src.preprocessing.election_etl_common import DEFAULT_ENCODING, finalize_output_frame, write_output_frame
+from election_etl_common import DEFAULT_ENCODING, finalize_output_frame, write_output_frame
 
 
 def extract_and_process_2008(source_file: str, encoding: str = "latin-1", year: int = 2008) -> pd.DataFrame:

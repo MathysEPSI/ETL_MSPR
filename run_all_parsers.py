@@ -7,11 +7,17 @@ from typing import Callable
 
 import pandas as pd
 
-from src.preprocessing.election_etl_common import DEFAULT_ENCODING, DEFAULT_OUTPUT_STEM, finalize_output_frame, write_output_frame
-from src.preprocessing.extract_and_transform_2008 import extract_and_process_2008
-from src.preprocessing.extract_and_transform_2014 import extract_and_process_2014
-from src.preprocessing.extract_and_transform_2020 import extract_and_process_2020
-from src.preprocessing.extract_and_transform_2026 import extract_and_process_2026
+from election_etl_common import (
+    DEFAULT_ENCODING,
+    DEFAULT_OUTPUT_STEM,
+    filter_common_communes,
+    finalize_output_frame,
+    write_output_frame,
+)
+from extract_and_transform_2008 import extract_and_process_2008
+from extract_and_transform_2014 import extract_and_process_2014
+from extract_and_transform_2020 import extract_and_process_2020
+from extract_and_transform_2026 import extract_and_process_2026
 
 
 @dataclass(frozen=True)
@@ -185,7 +191,7 @@ def main() -> None:
 
         print(f"[RUN] {matching_spec.year} -> {output_path}")
         df = matching_spec.loader(sources, args.encoding, matching_spec.year)
-        df = finalize_output_frame(df)
+        df = filter_common_communes(df, years=[matching_spec.year])
         write_output_frame(df, output_path, args.format, args.encoding)
         print(f"[DONE] 1 jeu de donnees traite: {len(df)} lignes.")
         return
@@ -211,7 +217,7 @@ def main() -> None:
     if not frames:
         raise RuntimeError("Aucun fichier source compatible detecte.")
 
-    combined = finalize_output_frame(pd.concat(frames, ignore_index=True))
+    combined = filter_common_communes(finalize_output_frame(pd.concat(frames, ignore_index=True)), years=processed_years)
     write_output_frame(combined, output_path, args.format, args.encoding)
 
     years_text = ", ".join(str(year) for year in processed_years)
