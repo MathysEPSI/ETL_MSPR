@@ -58,7 +58,7 @@ import pandas as pd
 
 from src.starschema.star_schema import build_star_schema, export_tables_dataframes
 
-flat = pd.read_csv("processed_data/elections_flat.csv", sep=";", dtype="string")
+flat = pd.read_csv("processed_data/elections_flat.csv", sep=";", encoding="latin-1", dtype="string")
 tables = build_star_schema(flat)
 tables_df = export_tables_dataframes(tables)
 ```
@@ -75,7 +75,7 @@ import pandas as pd
 
 from src.starschema.star_schema import GeoJoinConfig, build_star_schema, register_geo_metrics_dataset
 
-flat = pd.read_csv("processed_data/elections_flat.csv", sep=";", dtype="string")
+flat = pd.read_csv("processed_data/elections_flat.csv", sep=";", encoding="latin-1", dtype="string")
 tables = build_star_schema(flat)
 
 dataset = pd.DataFrame(
