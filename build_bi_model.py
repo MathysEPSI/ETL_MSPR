@@ -1,0 +1,43 @@
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+
+import pandas as pd
+
+from bi_model import build_star_schema, export_tables_csv
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Build BI fact/dimension tables from elections_flat output.")
+    parser.add_argument("--input", default="processed_data/elections_flat.csv", help="Flat source file produced by ETL")
+    parser.add_argument("--sep", default=";", help="Input separator for flat CSV")
+    parser.add_argument("--encoding", default="latin-1", help="Input encoding for flat CSV")
+    parser.add_argument("--output-dir", default="processed_data/bi_model", help="Output directory for BI tables")
+    parser.add_argument(
+        "--export",
+        choices=["csv", "none", "both"],
+        default="csv",
+        help="Export mode: csv writes files, none keeps in-memory build only, both aliases csv for CLI",
+    )
+    args = parser.parse_args()
+
+    input_path = Path(args.input)
+    if not input_path.exists():
+        raise FileNotFoundError(f"Input not found: {input_path}")
+
+    flat_df = pd.read_csv(input_path, sep=args.sep, encoding=args.encoding, dtype="string")
+    tables = build_star_schema(flat_df)
+
+    if args.export in {"csv", "both"}:
+        export_tables_csv(tables, output_dir=args.output_dir, sep=";", encoding="utf-8")
+
+    print("[DONE] BI model built:")
+    for name, table in tables.items():
+        print(f"- {name}: {len(table)} rows")
+
+
+if __name__ == "__main__":
+    main()
+
+

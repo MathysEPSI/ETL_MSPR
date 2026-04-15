@@ -34,3 +34,66 @@ Le format final contient 17 colonnes harmonisées :
 - ligne résultat : `code_nuance`, `nom`, `prenom`, `liste`, `voix`
 
 Les colonnes numériques sont exportées en entier quand c’est pertinent. Les pourcentages dérivables (`pct_*`) ne sont plus exportés et peuvent être calculés côté BI.
+
+## Tables de fait & dimensions
+Le fichier `processed_data/elections_flat.csv` peut être transformé en modèle en étoile.
+
+Tables générées :
+- `dim_geographie`
+- `dim_election`
+- `dim_bureau_vote`
+- `dim_candidat_liste`
+- `fact_resultats_votes`
+
+Grain de la fact : 1 ligne = 1 candidat dans 1 bureau de vote, pour 1 tour et 1 annee.
+
+### Export CSV des tables BI
+```powershell
+python build_bi_model.py --input processed_data/elections_flat.csv --output-dir processed_data/bi_model --export csv
+```
+
+### Usage en DataFrames pandas (insertion BDD directe)
+```python
+import pandas as pd
+
+from bi_model import build_star_schema, export_tables_dataframes
+
+flat = pd.read_csv("processed_data/elections_flat.csv", sep=";", dtype="string")
+tables = build_star_schema(flat)
+tables_df = export_tables_dataframes(tables)
+
+# Exemple: insertion SQL (a adapter a votre moteur)
+# tables_df["dim_geographie"].to_sql("dim_geographie", engine, if_exists="replace", index=False)
+```
+
+### Ajouter d'autres datasets analytiques (cle geographique)
+Le module expose `register_geo_metrics_dataset(...)` pour rattacher un autre dataset via:
+- `code_commune` (prioritaire)
+- ou `code_postal + nom ville`
+- ou `nom ville` seul (fallback)
+
+Exemple minimal:
+```python
+import pandas as pd
+
+from bi_model import GeoJoinConfig, build_star_schema, register_geo_metrics_dataset
+
+flat = pd.read_csv("processed_data/elections_flat.csv", sep=";", dtype="string")
+tables = build_star_schema(flat)
+
+dataset = pd.DataFrame(
+	{
+		"code_commune": ["01004", "01007"],
+		"indice_socio": [72.3, 54.1],
+	}
+)
+
+fact_metrics = register_geo_metrics_dataset(
+	dataset_name="indicateurs_territoriaux",
+	metrics_df=dataset,
+	dim_geographie=tables["dim_geographie"],
+	metric_columns=["indice_socio"],
+	join_config=GeoJoinConfig(code_commune_col="code_commune"),
+)
+```
+
