@@ -7,7 +7,6 @@ from election_etl_common import (
 	DEFAULT_ENCODING,
 	finalize_output_frame,
 	normalize_code,
-	percent,
 	to_int,
 	write_output_frame,
 )
@@ -41,7 +40,7 @@ def _parse_file(path: Path, tour: int, sep: str, encoding: str, year: int) -> li
 				if len(candidate) < REPEATING_COL_COUNT:
 					continue
 
-				_npan, code_nuance, sexe, nom, prenom, liste, voix, pct_voix_ins, pct_voix_exp = candidate
+				_npan, code_nuance, sexe, nom, prenom, liste, voix, _pct_voix_ins, _pct_voix_exp = candidate
 				if not any(x.strip() for x in (code_nuance, nom, prenom, liste, voix)):
 					continue
 
@@ -66,8 +65,6 @@ def _parse_file(path: Path, tour: int, sep: str, encoding: str, year: int) -> li
 						"prenom": prenom,
 						"liste": liste,
 						"voix": voix,
-						"pct_voix_ins": pct_voix_ins,
-						"pct_voix_exp": pct_voix_exp,
 					}
 				)
 
@@ -88,14 +85,6 @@ def extract_and_process_2020(source_t1: str, source_t2: str, encoding: str = "la
 
 	df["blancs_nuls"] = df["blancs"] + df["nuls"]
 
-	df["pct_abs_ins"] = percent(df["abstentions"], df["inscrits"])
-	df["pct_vot_ins"] = percent(df["votants"], df["inscrits"])
-	df["pct_blnuls_ins"] = percent(df["blancs_nuls"], df["inscrits"])
-	df["pct_blnuls_vot"] = percent(df["blancs_nuls"], df["votants"])
-	df["pct_exp_ins"] = percent(df["exprimes"], df["inscrits"])
-	df["pct_exp_vot"] = percent(df["exprimes"], df["votants"])
-	df["pct_voix_ins"] = percent(df["voix"], df["inscrits"])
-	df["pct_voix_exp"] = percent(df["voix"], df["exprimes"])
 
 	df["code_departement"] = normalize_code(df["code_departement"], width=2)
 	df["code_commune"] = normalize_code(df["code_commune"], width=3)

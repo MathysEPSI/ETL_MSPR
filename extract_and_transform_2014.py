@@ -6,7 +6,6 @@ import pandas as pd
 from election_etl_common import (
     DEFAULT_ENCODING,
     finalize_output_frame,
-    percent,
     to_int,
     write_output_frame,
 )
@@ -81,14 +80,6 @@ def extract_and_process_2014(source_file: str, encoding: str = "latin-1", year: 
     df["abstentions"] = df["inscrits"] - df["votants"]
     df["blancs_nuls"] = df["votants"] - df["exprimes"]
 
-    df["pct_abs_ins"] = percent(df["abstentions"], df["inscrits"])
-    df["pct_vot_ins"] = percent(df["votants"], df["inscrits"])
-    df["pct_blnuls_ins"] = percent(df["blancs_nuls"], df["inscrits"])
-    df["pct_blnuls_vot"] = percent(df["blancs_nuls"], df["votants"])
-    df["pct_exp_ins"] = percent(df["exprimes"], df["inscrits"])
-    df["pct_exp_vot"] = percent(df["exprimes"], df["votants"])
-    df["pct_voix_ins"] = percent(df["voix"], df["inscrits"])
-    df["pct_voix_exp"] = percent(df["voix"], df["exprimes"])
 
     return finalize_output_frame(df)
 

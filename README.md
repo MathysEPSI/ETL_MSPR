@@ -26,11 +26,11 @@ python run_all_parsers.py --input data --year all --format parquet
 - `--strict` : échoue si un jeu de données attendu manque dans le dossier
 
 ## Outputs
-Le format final contient 25 colonnes harmonisées :
+Le format final contient 17 colonnes harmonisées :
 
 - métadonnées d’élection : `annee_election`, `tour`
 - géographie : `code_departement`, `libelle_departement`, `code_commune`, `libelle_commune`, `code_bureau_vote`
-- agrégats bureau de vote : `inscrits`, `abstentions`, `pct_abs_ins`, `votants`, `pct_vot_ins`, `blancs_nuls`, `pct_blnuls_ins`, `pct_blnuls_vot`, `exprimes`, `pct_exp_ins`, `pct_exp_vot`
-- ligne résultat : `code_nuance`, `nom`, `prenom`, `liste`, `voix`, `pct_voix_ins`, `pct_voix_exp`
+- agrégats bureau de vote : `inscrits`, `abstentions`, `votants`, `blancs_nuls`, `exprimes`
+- ligne résultat : `code_nuance`, `nom`, `prenom`, `liste`, `voix`
 
-Les colonnes numériques sont exportées en entier quand c’est pertinent, et les pourcentages utilisent le point décimal standard.
+Les colonnes numériques sont exportées en entier quand c’est pertinent. Les pourcentages dérivables (`pct_*`) ne sont plus exportés et peuvent être calculés côté BI.

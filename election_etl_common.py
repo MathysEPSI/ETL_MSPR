@@ -17,22 +17,14 @@ OUTPUT_COLUMNS = [
     "code_bureau_vote",
     "inscrits",
     "abstentions",
-    "pct_abs_ins",
     "votants",
-    "pct_vot_ins",
     "blancs_nuls",
-    "pct_blnuls_ins",
-    "pct_blnuls_vot",
     "exprimes",
-    "pct_exp_ins",
-    "pct_exp_vot",
     "code_nuance",
     "nom",
     "prenom",
     "liste",
     "voix",
-    "pct_voix_ins",
-    "pct_voix_exp",
 ]
 
 INTEGER_COLUMNS = [
@@ -44,17 +36,6 @@ INTEGER_COLUMNS = [
     "blancs_nuls",
     "exprimes",
     "voix",
-]
-
-DECIMAL_COLUMNS = [
-    "pct_abs_ins",
-    "pct_vot_ins",
-    "pct_blnuls_ins",
-    "pct_blnuls_vot",
-    "pct_exp_ins",
-    "pct_exp_vot",
-    "pct_voix_ins",
-    "pct_voix_exp",
 ]
 
 PARSER_REQUIRED_COLUMNS = [
@@ -73,17 +54,6 @@ PARSER_REQUIRED_COLUMNS = [
 def to_int(series: pd.Series) -> pd.Series:
     numeric = pd.to_numeric(series, errors="coerce")
     return pd.Series(numeric, index=series.index, dtype="Int64")
-
-
-def to_decimal(series: pd.Series) -> pd.Series:
-    numeric = pd.to_numeric(series.astype(str).str.replace(",", ".", regex=False), errors="coerce")
-    return pd.Series(numeric, index=series.index, dtype="Float64")
-
-
-def percent(numerator: pd.Series, denominator: pd.Series) -> pd.Series:
-    result = (numerator.astype("Float64") * 100.0) / denominator.astype("Float64")
-    result = result.where(denominator.notna() & (denominator != 0))
-    return result.round(2)
 
 
 def normalize_code(series: pd.Series, width: int) -> pd.Series:
@@ -187,8 +157,6 @@ def finalize_output_frame(df: pd.DataFrame) -> pd.DataFrame:
 
     frame = frame.reindex(columns=OUTPUT_COLUMNS)
 
-    for column in DECIMAL_COLUMNS:
-        frame[column] = to_decimal(frame[column])
 
     for column in INTEGER_COLUMNS:
         frame[column] = to_int(frame[column])

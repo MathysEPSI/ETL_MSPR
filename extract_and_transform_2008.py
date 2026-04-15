@@ -48,7 +48,7 @@ def extract_and_process_2008(source_file: str, encoding: str = "latin-1", year: 
                 if len(cand) < repeating_col_count:
                     continue
 
-                code_nuance, sexe, nom, prenom, liste, _sieges, voix, pct_voix_ins, pct_voix_exp = cand
+                code_nuance, sexe, nom, prenom, liste, _sieges, voix, _pct_voix_ins, _pct_voix_exp = cand
                 if not any(x.strip() for x in (liste, nom, voix)):
                     continue
 
@@ -63,23 +63,15 @@ def extract_and_process_2008(source_file: str, encoding: str = "latin-1", year: 
                         "code_bureau_vote": base[5],
                         "inscrits": base[6],
                         "abstentions": base[7],
-                        "pct_abs_ins": base[8],
                         "votants": base[9],
-                        "pct_vot_ins": base[10],
                         "blancs_nuls": base[11],
-                        "pct_blnuls_ins": base[12],
-                        "pct_blnuls_vot": base[13],
                         "exprimes": base[14],
-                        "pct_exp_ins": base[15],
-                        "pct_exp_vot": base[16],
                         "code_nuance": code_nuance,
                         "sexe": sexe,
                         "nom": nom,
                         "prenom": prenom,
                         "liste": liste,
                         "voix": voix,
-                        "pct_voix_ins": pct_voix_ins,
-                        "pct_voix_exp": pct_voix_exp,
                     }
                 )
 
