@@ -91,7 +91,7 @@ def _assign_surrogate_key(df: pd.DataFrame, nk_col: str, sk_col: str) -> pd.Data
     return out
 
 
-def build_star_schema(flat_df: pd.DataFrame) -> dict[str, pd.DataFrame]:
+def build_star_schema(flat_df: pd.DataFrame, include_unknown_members: bool = False) -> dict[str, pd.DataFrame]:
     missing = [col for col in FLAT_REQUIRED_COLUMNS if col not in flat_df.columns]
     if missing:
         missing_text = ", ".join(missing)
@@ -138,12 +138,14 @@ def build_star_schema(flat_df: pd.DataFrame) -> dict[str, pd.DataFrame]:
     dim_geographie["code_postal"] = pd.NA
     dim_geographie = _assign_surrogate_key(dim_geographie, nk_col="geo_nk", sk_col="geo_sk")
     dim_geographie = dim_geographie[["geo_sk", "geo_nk", "code_postal", "code_departement", "libelle_departement", "code_commune", "libelle_commune"]]
-    dim_geographie = _add_unknown_row(dim_geographie, sk_col="geo_sk", nk_col="geo_nk", unknown_nk="GEO_UNKNOWN")
+    if include_unknown_members:
+        dim_geographie = _add_unknown_row(dim_geographie, sk_col="geo_sk", nk_col="geo_nk", unknown_nk="GEO_UNKNOWN")
 
     dim_election = stage[["election_nk", "annee_election", "tour"]].copy()
     dim_election = _assign_surrogate_key(dim_election, nk_col="election_nk", sk_col="election_sk")
     dim_election = dim_election[["election_sk", "election_nk", "annee_election", "tour"]]
-    dim_election = _add_unknown_row(dim_election, sk_col="election_sk", nk_col="election_nk", unknown_nk="ELECTION_UNKNOWN")
+    if include_unknown_members:
+        dim_election = _add_unknown_row(dim_election, sk_col="election_sk", nk_col="election_nk", unknown_nk="ELECTION_UNKNOWN")
 
     dim_bureau_vote = stage[["bureau_nk", "geo_nk", "code_bureau_vote"]].copy()
     dim_bureau_vote = _assign_surrogate_key(dim_bureau_vote, nk_col="bureau_nk", sk_col="bureau_sk")
@@ -153,15 +155,20 @@ def build_star_schema(flat_df: pd.DataFrame) -> dict[str, pd.DataFrame]:
         how="left",
         validate="m:1",
     )
-    dim_bureau_vote["geo_sk"] = dim_bureau_vote["geo_sk"].fillna(0).astype("Int64")
+    if include_unknown_members:
+        dim_bureau_vote["geo_sk"] = dim_bureau_vote["geo_sk"].fillna(0).astype("Int64")
+    else:
+        dim_bureau_vote["geo_sk"] = dim_bureau_vote["geo_sk"].astype("Int64")
     dim_bureau_vote = dim_bureau_vote[["bureau_sk", "bureau_nk", "geo_sk", "code_bureau_vote"]]
-    dim_bureau_vote = _add_unknown_row(dim_bureau_vote, sk_col="bureau_sk", nk_col="bureau_nk", unknown_nk="BUREAU_UNKNOWN")
-    dim_bureau_vote.loc[0, "geo_sk"] = 0
+    if include_unknown_members:
+        dim_bureau_vote = _add_unknown_row(dim_bureau_vote, sk_col="bureau_sk", nk_col="bureau_nk", unknown_nk="BUREAU_UNKNOWN")
+        dim_bureau_vote.loc[0, "geo_sk"] = 0
 
     dim_candidat_liste = stage[["candidat_nk", "code_nuance", "nom", "prenom", "liste"]].copy()
     dim_candidat_liste = _assign_surrogate_key(dim_candidat_liste, nk_col="candidat_nk", sk_col="candidat_sk")
     dim_candidat_liste = dim_candidat_liste[["candidat_sk", "candidat_nk", "code_nuance", "nom", "prenom", "liste"]]
-    dim_candidat_liste = _add_unknown_row(dim_candidat_liste, sk_col="candidat_sk", nk_col="candidat_nk", unknown_nk="CANDIDAT_UNKNOWN")
+    if include_unknown_members:
+        dim_candidat_liste = _add_unknown_row(dim_candidat_liste, sk_col="candidat_sk", nk_col="candidat_nk", unknown_nk="CANDIDAT_UNKNOWN")
 
     fact = stage[["geo_nk", "bureau_nk", "election_nk", "candidat_nk", *MEASURE_COLUMNS]].copy()
 
@@ -171,7 +178,10 @@ def build_star_schema(flat_df: pd.DataFrame) -> dict[str, pd.DataFrame]:
     fact = fact.merge(dim_candidat_liste[["candidat_sk", "candidat_nk"]], on="candidat_nk", how="left", validate="m:1")
 
     for fk in ["geo_sk", "bureau_sk", "election_sk", "candidat_sk"]:
-        fact[fk] = fact[fk].fillna(0).astype("Int64")
+        if include_unknown_members:
+            fact[fk] = fact[fk].fillna(0).astype("Int64")
+        else:
+            fact[fk] = fact[fk].astype("Int64")
 
     fact = fact[["election_sk", "geo_sk", "bureau_sk", "candidat_sk", *MEASURE_COLUMNS]].copy()
     fact.insert(0, "fact_id", pd.RangeIndex(start=1, stop=len(fact) + 1, step=1))
@@ -201,6 +211,7 @@ def register_geo_metrics_dataset(
     dim_geographie: pd.DataFrame,
     metric_columns: Iterable[str],
     join_config: GeoJoinConfig,
+    include_unknown_members: bool = False,
 ) -> pd.DataFrame:
     out = metrics_df.copy()
 
@@ -219,7 +230,10 @@ def register_geo_metrics_dataset(
 
     result = out[["geo_nk", *metrics_cols]].copy()
     result = result.merge(dim_geographie[["geo_sk", "geo_nk"]], on="geo_nk", how="left", validate="m:1")
-    result["geo_sk"] = result["geo_sk"].fillna(0).astype("Int64")
+    if include_unknown_members:
+        result["geo_sk"] = result["geo_sk"].fillna(0).astype("Int64")
+    else:
+        result["geo_sk"] = result["geo_sk"].astype("Int64")
     result.insert(0, "dataset_name", dataset_name)
     result.insert(1, "metric_row_id", pd.RangeIndex(start=1, stop=len(result) + 1, step=1))
 
