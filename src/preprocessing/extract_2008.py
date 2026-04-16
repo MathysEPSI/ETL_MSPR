@@ -75,7 +75,17 @@ def extract_and_process_2008(source_file: str, encoding: str = "latin-1", year: 
                     }
                 )
 
-    return finalize_output_frame(pd.DataFrame(records))
+    df = pd.DataFrame(records)
+
+    # Hard fix requested: 2008 Chatenay-Malabry (92019) has corrupted inscrits scale.
+    if year == 2008 and not df.empty:
+        code_dep = df["code_departement"].astype("string").str.strip()
+        code_com = df["code_commune"].astype("string").str.strip()
+        mask_chatenay_2008 = code_dep.eq("92") & (code_com.eq("019") | code_com.eq("92019"))
+        df.loc[mask_chatenay_2008, "abstentions"] = "0"
+        df.loc[mask_chatenay_2008, "inscrits"] = df.loc[mask_chatenay_2008, "votants"]
+
+    return finalize_output_frame(df)
 
 
 def main() -> None:
