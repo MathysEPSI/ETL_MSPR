@@ -11,7 +11,6 @@ FLAT_REQUIRED_COLUMNS = [
     "libelle_departement",
     "code_commune",
     "libelle_commune",
-    "code_bureau_vote",
     "inscrits",
     "abstentions",
     "votants",
@@ -24,7 +23,10 @@ FLAT_REQUIRED_COLUMNS = [
     "voix",
 ]
 
-MEASURE_COLUMNS = ["inscrits", "abstentions", "votants", "blancs_nuls", "exprimes", "voix"]
+PARTICIPATION_COLUMNS = ["inscrits", "abstentions", "votants", "blancs_nuls", "exprimes"]
+RESULT_COLUMNS = ["voix"]
+
+
 def _normalize_text(series: pd.Series) -> pd.Series:
     return series.astype("string").str.strip()
 
@@ -65,7 +67,6 @@ def build_star_schema(flat_df: pd.DataFrame, include_unknown_members: bool = Fal
         "libelle_departement",
         "code_commune",
         "libelle_commune",
-        "code_bureau_vote",
         "code_nuance",
         "nom",
         "prenom",
@@ -75,7 +76,6 @@ def build_star_schema(flat_df: pd.DataFrame, include_unknown_members: bool = Fal
 
     stage["code_commune"] = _normalize_code_commune(stage["code_commune"])
 
-    stage["bureau_nk"] = stage["code_commune"].fillna("UNKNOWN") + "|BV:" + _normalize_upper(stage["code_bureau_vote"]).fillna("UNKNOWN")
     stage["election_nk"] = _normalize_text(stage["annee_election"]).fillna("UNKNOWN") + "|T" + _normalize_text(stage["tour"]).fillna("UNKNOWN")
     stage["candidat_nk"] = (
         _normalize_upper(stage["code_nuance"]).fillna("NC")
@@ -87,7 +87,7 @@ def build_star_schema(flat_df: pd.DataFrame, include_unknown_members: bool = Fal
         + _normalize_upper(stage["liste"]).fillna("UNKNOWN")
     )
 
-    for col in ["annee_election", "tour", *MEASURE_COLUMNS]:
+    for col in ["annee_election", "tour", *PARTICIPATION_COLUMNS, *RESULT_COLUMNS]:
         stage[col] = pd.to_numeric(stage[col], errors="coerce").astype("Int64")
 
     dim_geographie = stage[["code_commune", "code_departement", "libelle_departement", "libelle_commune"]].copy()
@@ -102,61 +102,68 @@ def build_star_schema(flat_df: pd.DataFrame, include_unknown_members: bool = Fal
     if include_unknown_members:
         dim_election = _add_unknown_row(dim_election, sk_col="election_sk", nk_col="election_nk", unknown_nk="ELECTION_UNKNOWN")
 
-    dim_bureau_vote = stage[["bureau_nk", "code_commune", "code_bureau_vote"]].copy()
-    dim_bureau_vote = _assign_surrogate_key(dim_bureau_vote, nk_col="bureau_nk", sk_col="bureau_sk")
-    dim_bureau_vote = dim_bureau_vote.merge(
-        dim_geographie[["geo_sk", "code_commune"]],
-        on="code_commune",
-        how="left",
-        validate="m:1",
-    )
-    if include_unknown_members:
-        dim_bureau_vote["geo_sk"] = dim_bureau_vote["geo_sk"].fillna(0).astype("Int64")
-    else:
-        dim_bureau_vote["geo_sk"] = dim_bureau_vote["geo_sk"].astype("Int64")
-    dim_bureau_vote = dim_bureau_vote[["bureau_sk", "bureau_nk", "geo_sk", "code_commune", "code_bureau_vote"]]
-    if include_unknown_members:
-        dim_bureau_vote = _add_unknown_row(dim_bureau_vote, sk_col="bureau_sk", nk_col="bureau_nk", unknown_nk="BUREAU_UNKNOWN")
-        dim_bureau_vote.loc[0, "geo_sk"] = 0
-
     dim_candidat_liste = stage[["candidat_nk", "code_nuance", "nom", "prenom", "liste"]].copy()
     dim_candidat_liste = _assign_surrogate_key(dim_candidat_liste, nk_col="candidat_nk", sk_col="candidat_sk")
     dim_candidat_liste = dim_candidat_liste[["candidat_sk", "candidat_nk", "code_nuance", "nom", "prenom", "liste"]]
     if include_unknown_members:
         dim_candidat_liste = _add_unknown_row(dim_candidat_liste, sk_col="candidat_sk", nk_col="candidat_nk", unknown_nk="CANDIDAT_UNKNOWN")
 
-    fact = stage[["code_commune", "bureau_nk", "election_nk", "candidat_nk", *MEASURE_COLUMNS]].copy()
-
-    fact = fact.merge(dim_geographie[["geo_sk", "code_commune"]], on="code_commune", how="left", validate="m:1")
-    fact = fact.merge(dim_bureau_vote[["bureau_sk", "bureau_nk"]], on="bureau_nk", how="left", validate="m:1")
-    fact = fact.merge(dim_election[["election_sk", "election_nk"]], on="election_nk", how="left", validate="m:1")
-    fact = fact.merge(dim_candidat_liste[["candidat_sk", "candidat_nk"]], on="candidat_nk", how="left", validate="m:1")
-
-    for fk in ["geo_sk", "bureau_sk", "election_sk", "candidat_sk"]:
+    fact_participation = (
+        stage.groupby(["code_commune", "election_nk"], dropna=False)[PARTICIPATION_COLUMNS].max().reset_index()
+    )
+    fact_participation = fact_participation.merge(
+        dim_geographie[["geo_sk", "code_commune"]], on="code_commune", how="left", validate="m:1"
+    )
+    fact_participation = fact_participation.merge(
+        dim_election[["election_sk", "election_nk"]], on="election_nk", how="left", validate="m:1"
+    )
+    for fk in ["geo_sk", "election_sk"]:
         if include_unknown_members:
-            fact[fk] = fact[fk].fillna(0).astype("Int64")
+            fact_participation[fk] = fact_participation[fk].fillna(0).astype("Int64")
         else:
-            fact[fk] = fact[fk].astype("Int64")
+            fact_participation[fk] = fact_participation[fk].astype("Int64")
 
-    fact = fact[["election_sk", "geo_sk", "bureau_sk", "candidat_sk", *MEASURE_COLUMNS]].copy()
-    fact.insert(0, "fact_id", pd.RangeIndex(start=1, stop=len(fact) + 1, step=1))
+    fact_participation = fact_participation[["election_sk", "geo_sk", *PARTICIPATION_COLUMNS]].copy()
+    fact_participation.insert(0, "participation_id", pd.RangeIndex(start=1, stop=len(fact_participation) + 1, step=1))
+
+    fact_resultats_liste = (
+        stage.groupby(["code_commune", "election_nk", "candidat_nk"], dropna=False)["voix"].sum(min_count=1).reset_index()
+    )
+    fact_resultats_liste = fact_resultats_liste.merge(
+        dim_geographie[["geo_sk", "code_commune"]], on="code_commune", how="left", validate="m:1"
+    )
+    fact_resultats_liste = fact_resultats_liste.merge(
+        dim_election[["election_sk", "election_nk"]], on="election_nk", how="left", validate="m:1"
+    )
+    fact_resultats_liste = fact_resultats_liste.merge(
+        dim_candidat_liste[["candidat_sk", "candidat_nk"]], on="candidat_nk", how="left", validate="m:1"
+    )
+
+    for fk in ["geo_sk", "election_sk", "candidat_sk"]:
+        if include_unknown_members:
+            fact_resultats_liste[fk] = fact_resultats_liste[fk].fillna(0).astype("Int64")
+        else:
+            fact_resultats_liste[fk] = fact_resultats_liste[fk].astype("Int64")
+
+    fact_resultats_liste = fact_resultats_liste[["election_sk", "geo_sk", "candidat_sk", *RESULT_COLUMNS]].copy()
+    fact_resultats_liste.insert(0, "resultat_liste_id", pd.RangeIndex(start=1, stop=len(fact_resultats_liste) + 1, step=1))
 
     validate_star_schema(
         {
             "dim_geographie": dim_geographie,
             "dim_election": dim_election,
-            "dim_bureau_vote": dim_bureau_vote,
             "dim_candidat_liste": dim_candidat_liste,
-            "fact_resultats_votes": fact,
+            "fact_participation": fact_participation,
+            "fact_resultats_liste": fact_resultats_liste,
         }
     )
 
     return {
         "dim_geographie": dim_geographie,
         "dim_election": dim_election,
-        "dim_bureau_vote": dim_bureau_vote,
         "dim_candidat_liste": dim_candidat_liste,
-        "fact_resultats_votes": fact,
+        "fact_participation": fact_participation,
+        "fact_resultats_liste": fact_resultats_liste,
     }
 
 
@@ -182,14 +189,13 @@ def export_tables_dataframes(tables: dict[str, pd.DataFrame]) -> dict[str, pd.Da
 def validate_star_schema(tables: dict[str, pd.DataFrame]) -> None:
     dim_geographie = tables["dim_geographie"]
     dim_election = tables["dim_election"]
-    dim_bureau_vote = tables["dim_bureau_vote"]
     dim_candidat_liste = tables["dim_candidat_liste"]
-    fact = tables["fact_resultats_votes"]
+    fact_participation = tables["fact_participation"]
+    fact_resultats_liste = tables["fact_resultats_liste"]
 
     checks = [
         ("dim_geographie.geo_sk", dim_geographie["geo_sk"].is_unique),
         ("dim_election.election_sk", dim_election["election_sk"].is_unique),
-        ("dim_bureau_vote.bureau_sk", dim_bureau_vote["bureau_sk"].is_unique),
         ("dim_candidat_liste.candidat_sk", dim_candidat_liste["candidat_sk"].is_unique),
     ]
 
@@ -200,26 +206,47 @@ def validate_star_schema(tables: dict[str, pd.DataFrame]) -> None:
     fk_rules = {
         "geo_sk": set(dim_geographie["geo_sk"].dropna().tolist()),
         "election_sk": set(dim_election["election_sk"].dropna().tolist()),
-        "bureau_sk": set(dim_bureau_vote["bureau_sk"].dropna().tolist()),
         "candidat_sk": set(dim_candidat_liste["candidat_sk"].dropna().tolist()),
     }
 
-    for fk_col, valid_values in fk_rules.items():
-        bad_fk_count = int((~fact[fk_col].isin(valid_values)).sum())
-        if bad_fk_count:
-            raise ValueError(f"FK invalide dans fact_resultats_votes.{fk_col}: {bad_fk_count} ligne(s)")
+    part_grain_unique = fact_participation[["election_sk", "geo_sk"]].drop_duplicates().shape[0] == len(fact_participation)
+    if not part_grain_unique:
+        raise ValueError("Grain non unique dans fact_participation (election_sk, geo_sk)")
 
-    if {"inscrits", "votants", "exprimes", "voix"}.issubset(fact.columns):
+    for fk_col in ["geo_sk", "election_sk"]:
+        bad_fk_count = int((~fact_participation[fk_col].isin(fk_rules[fk_col])).sum())
+        if bad_fk_count:
+            raise ValueError(f"FK invalide dans fact_participation.{fk_col}: {bad_fk_count} ligne(s)")
+
+    result_grain_unique = (
+        fact_resultats_liste[["election_sk", "geo_sk", "candidat_sk"]].drop_duplicates().shape[0]
+        == len(fact_resultats_liste)
+    )
+    if not result_grain_unique:
+        raise ValueError("Grain non unique dans fact_resultats_liste (election_sk, geo_sk, candidat_sk)")
+
+    for fk_col in ["geo_sk", "election_sk", "candidat_sk"]:
+        bad_fk_count = int((~fact_resultats_liste[fk_col].isin(fk_rules[fk_col])).sum())
+        if bad_fk_count:
+            raise ValueError(f"FK invalide dans fact_resultats_liste.{fk_col}: {bad_fk_count} ligne(s)")
+
+    if {"inscrits", "votants", "exprimes"}.issubset(fact_participation.columns):
         invalid_logic = (
-            (fact["inscrits"] < 0)
-            | (fact["votants"] < 0)
-            | (fact["exprimes"] < 0)
-            | (fact["voix"] < 0)
-            | (fact["votants"] > fact["inscrits"])
-            | (fact["exprimes"] > fact["votants"])
-            | (fact["voix"] > fact["exprimes"])
+            (fact_participation["inscrits"] < 0)
+            | (fact_participation["abstentions"] < 0)
+            | (fact_participation["votants"] < 0)
+            | (fact_participation["blancs_nuls"] < 0)
+            | (fact_participation["exprimes"] < 0)
+            | (fact_participation["votants"] > fact_participation["inscrits"])
+            | (fact_participation["exprimes"] > fact_participation["votants"])
+            | (fact_participation["blancs_nuls"] > fact_participation["votants"])
         )
         if bool(invalid_logic.fillna(False).any()):
-            raise ValueError("Incoherence metrique detectee dans fact_resultats_votes")
+            raise ValueError("Incoherence metrique detectee dans fact_participation")
+
+    if "voix" in fact_resultats_liste.columns:
+        invalid_voix = (fact_resultats_liste["voix"] < 0).fillna(False)
+        if bool(invalid_voix.any()):
+            raise ValueError("Incoherence metrique detectee dans fact_resultats_liste (voix negatives)")
 
 

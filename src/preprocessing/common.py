@@ -14,7 +14,6 @@ OUTPUT_COLUMNS = [
     "libelle_departement",
     "code_commune",
     "libelle_commune",
-    "code_bureau_vote",
     "inscrits",
     "abstentions",
     "votants",
@@ -43,12 +42,29 @@ PARSER_REQUIRED_COLUMNS = [
     "tour",
     "code_departement",
     "code_commune",
-    "code_bureau_vote",
     "inscrits",
     "votants",
     "exprimes",
     "voix",
 ]
+
+COMMUNE_KEY_COLUMNS = [
+    "annee_election",
+    "tour",
+    "code_departement",
+    "libelle_departement",
+    "code_commune",
+    "libelle_commune",
+]
+
+CANDIDATE_KEY_COLUMNS = [
+    "code_nuance",
+    "nom",
+    "prenom",
+    "liste",
+]
+
+TOTAL_MEASURE_COLUMNS = ["inscrits", "abstentions", "votants", "blancs_nuls", "exprimes"]
 
 
 def to_int(series: pd.Series) -> pd.Series:
@@ -138,22 +154,60 @@ def filter_invalid_rows(df: pd.DataFrame) -> pd.DataFrame:
         invalid_mask = invalid_mask | (df["inscrits"] < 0) | (df["votants"] < 0) | (df["exprimes"] < 0) | (df["voix"] < 0)
         invalid_mask = invalid_mask | (df["votants"] > df["inscrits"]) | (df["exprimes"] > df["votants"]) | (df["voix"] > df["exprimes"])
 
-    # Requested business rule: remove rows with no turnout at polling-station level.
+    # Requested business rule: remove rows with no turnout.
     if "votants" in df.columns:
         invalid_mask = invalid_mask | (df["votants"] == 0)
 
     return df.loc[~invalid_mask].copy()
 
 
+def aggregate_to_commune(df: pd.DataFrame) -> pd.DataFrame:
+    if df.empty:
+        return df
+
+    frame = df.copy()
+    for col in [*COMMUNE_KEY_COLUMNS, *CANDIDATE_KEY_COLUMNS, *TOTAL_MEASURE_COLUMNS, "voix"]:
+        if col not in frame.columns:
+            frame[col] = pd.NA
+
+    for col in [*TOTAL_MEASURE_COLUMNS, "voix"]:
+        frame[col] = to_int(frame[col])
+
+    if "code_bureau_vote" in frame.columns:
+        bureau_rollup = (
+            frame.groupby([*COMMUNE_KEY_COLUMNS, "code_bureau_vote"], dropna=False)[TOTAL_MEASURE_COLUMNS]
+            .max()
+            .reset_index()
+        )
+        commune_totals = bureau_rollup.groupby(COMMUNE_KEY_COLUMNS, dropna=False)[TOTAL_MEASURE_COLUMNS].sum().reset_index()
+    else:
+        commune_totals = frame.groupby(COMMUNE_KEY_COLUMNS, dropna=False)[TOTAL_MEASURE_COLUMNS].max().reset_index()
+
+    candidate_scores = (
+        frame.groupby([*COMMUNE_KEY_COLUMNS, *CANDIDATE_KEY_COLUMNS], dropna=False)["voix"].sum(min_count=1).reset_index()
+    )
+
+    return candidate_scores.merge(commune_totals, on=COMMUNE_KEY_COLUMNS, how="left", validate="m:1")
+
+
 def finalize_output_frame(df: pd.DataFrame) -> pd.DataFrame:
     frame = filter_mainland_rows(df.copy())
-    for column in OUTPUT_COLUMNS:
+
+    for column in ["code_departement", "code_commune", "code_nuance"]:
         if column not in frame.columns:
             frame[column] = pd.NA
 
     frame["code_departement"] = normalize_code(frame["code_departement"], width=2)
     frame["code_commune"] = normalize_commune_code(frame["code_departement"], frame["code_commune"])
+    if "code_bureau_vote" in frame.columns:
+        frame["code_bureau_vote"] = normalize_code(frame["code_bureau_vote"], width=4)
     frame["code_nuance"] = normalize_code_nuance(frame["code_nuance"])
+
+    frame = aggregate_to_commune(frame)
+
+    for column in OUTPUT_COLUMNS:
+        if column not in frame.columns:
+            frame[column] = pd.NA
 
     frame = frame.reindex(columns=OUTPUT_COLUMNS)
 
@@ -169,7 +223,7 @@ def write_output_frame(df: pd.DataFrame, output_path: str | Path, file_format: s
     path.parent.mkdir(parents=True, exist_ok=True)
 
     if file_format == "csv":
-        df.to_csv(path, sep=";", index=False, encoding=encoding, decimal=".")
+        df.to_csv(path, sep=";", index=False, encoding=encoding, decimal=".", errors="replace")
     else:
         df.to_parquet(path, index=False)
 

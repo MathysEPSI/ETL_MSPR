@@ -21,16 +21,16 @@ python -m src.preprocessing.run_pipeline --input data --year all --format parque
 - `--input` / `--source-dir` : fichier ou dossier d’entrée
 - `--output` : chemin exact du fichier de sortie
 - `--format` : `csv` ou `parquet`
-- `--encoding` : encodage des sources, par défaut `latin-1`
+- `--encoding` : encodage des sources (2008/2014/2020), par défaut `latin-1` (`2026` est forcé en `utf-8`)
 - `--year` / `--years` : `all` par défaut, ou liste séparée par des virgules
 - `--strict` : échoue si un jeu de données attendu manque dans le dossier
 
 ## Outputs
-Le format final contient 17 colonnes harmonisées :
+Le format final contient 16 colonnes harmonisées :
 
 - métadonnées d’élection : `annee_election`, `tour`
-- géographie : `code_departement`, `libelle_departement`, `code_commune`, `libelle_commune`, `code_bureau_vote`
-- agrégats bureau de vote : `inscrits`, `abstentions`, `votants`, `blancs_nuls`, `exprimes`
+- géographie : `code_departement`, `libelle_departement`, `code_commune`, `libelle_commune`
+- agrégats commune : `inscrits`, `abstentions`, `votants`, `blancs_nuls`, `exprimes`
 - ligne résultat : `code_nuance`, `nom`, `prenom`, `liste`, `voix`
 
 ## Tables de fait & dimensions
@@ -39,11 +39,13 @@ Le fichier `processed_data/elections_flat.csv` peut être transformé en modèle
 Tables générées :
 - `dim_geographie`
 - `dim_election`
-- `dim_bureau_vote`
 - `dim_candidat_liste`
-- `fact_resultats_votes`
+- `fact_participation`
+- `fact_resultats_liste`
 
-Grain de la fact : 1 ligne = 1 candidat dans 1 bureau de vote, pour 1 tour et 1 annee.
+Grain des facts :
+- `fact_participation` : 1 ligne = 1 commune pour 1 tour et 1 annee
+- `fact_resultats_liste` : 1 ligne = 1 candidat/liste dans 1 commune, pour 1 tour et 1 annee
 
 ### Export CSV des tables du modele en etoile
 ```powershell

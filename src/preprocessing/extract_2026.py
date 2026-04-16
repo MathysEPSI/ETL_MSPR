@@ -5,7 +5,6 @@ from pathlib import Path
 import pandas as pd
 
 from .common import (
-    DEFAULT_ENCODING,
     finalize_output_frame,
     normalize_code,
     to_int,
@@ -87,7 +86,7 @@ def _extract_records(path: Path, tour: int, encoding: str, year: int) -> list[di
     return records
 
 
-def extract_and_process_2026(source_t1: str, source_t2: str, encoding: str = "latin-1", year: int = 2026) -> pd.DataFrame:
+def extract_and_process_2026(source_t1: str, source_t2: str, encoding: str = "utf-8", year: int = 2026) -> pd.DataFrame:
     records: list[dict[str, object]] = []
     records.extend(_extract_records(Path(source_t1), tour=1, encoding=encoding, year=year))
     records.extend(_extract_records(Path(source_t2), tour=2, encoding=encoding, year=year))
@@ -123,7 +122,7 @@ def main() -> None:
     )
     parser.add_argument("--output", default=None, help="Fichier de sortie")
     parser.add_argument("--format", choices=["csv", "parquet"], default="csv", help="Format de sortie")
-    parser.add_argument("--encoding", default=DEFAULT_ENCODING, help="Encodage des fichiers source")
+    parser.add_argument("--encoding", default="utf-8", help="Encodage des fichiers source")
     parser.add_argument("--year", type=int, default=2026, help="Annee election a injecter")
     args = parser.parse_args()
 

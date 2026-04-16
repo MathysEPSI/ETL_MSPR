@@ -25,6 +25,7 @@ class YearSpec:
     year: int
     source_names: tuple[str, ...]
     loader: Callable[[list[Path], str, int], pd.DataFrame]
+    source_encoding: str | None = None
 
 
 def _load_2008(paths: list[Path], encoding: str, year: int) -> pd.DataFrame:
@@ -61,6 +62,7 @@ YEAR_SPECS: tuple[YearSpec, ...] = (
             "municipales-2026-resultats-bureau-de-vote-2026-03-23-16h15.csv",
         ),
         loader=_load_2026,
+        source_encoding="utf-8",
     ),
 )
 
@@ -190,7 +192,8 @@ def main() -> None:
             raise FileNotFoundError(f"Fichier(s) source incomplet(s) pour {matching_spec.year} autour de: {input_path}")
 
         print(f"[RUN] {matching_spec.year} -> {output_path}")
-        df = matching_spec.loader(sources, args.encoding, matching_spec.year)
+        source_encoding = matching_spec.source_encoding or args.encoding
+        df = matching_spec.loader(sources, source_encoding, matching_spec.year)
         df = filter_common_communes(df, years=[matching_spec.year])
         write_output_frame(df, output_path, args.format, args.encoding)
         print(f"[DONE] 1 jeu de donnees traite: {len(df)} lignes.")
@@ -210,7 +213,8 @@ def main() -> None:
             continue
 
         print(f"[RUN] {year} -> {output_path}")
-        frame = spec.loader(sources, args.encoding, year)
+        source_encoding = spec.source_encoding or args.encoding
+        frame = spec.loader(sources, source_encoding, year)
         frames.append(frame)
         processed_years.append(year)
 
