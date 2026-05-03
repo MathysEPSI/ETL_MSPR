@@ -1,5 +1,9 @@
+import sys
 from pathlib import Path
 from mage_ai.settings.repo import get_repo_path
+
+# Ensure the Mage project root is on sys.path so 'src' package resolves
+sys.path.insert(0, get_repo_path())
 
 if "data_loader" not in globals():
     from mage_ai.data_preparation.decorators import data_loader

@@ -1,4 +1,8 @@
+import sys
 import pandas as pd
+from mage_ai.settings.repo import get_repo_path
+
+sys.path.insert(0, get_repo_path())
 
 if "transformer" not in globals():
     from mage_ai.data_preparation.decorators import transformer
