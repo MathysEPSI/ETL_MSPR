@@ -26,6 +26,16 @@ TABLE_ORDER = [
     'fact_resultats_liste',
 ]
 
+# Primary keys — Mage exports plain tables with no PK, Postgres needs these
+# before it can enforce FK references
+PK_STATEMENTS = [
+    f"ALTER TABLE {SCHEMA_NAME}.dim_geographie ADD PRIMARY KEY (geo_sk);",
+    f"ALTER TABLE {SCHEMA_NAME}.dim_election ADD PRIMARY KEY (election_sk);",
+    f"ALTER TABLE {SCHEMA_NAME}.dim_candidat_liste ADD PRIMARY KEY (candidat_sk);",
+    f"ALTER TABLE {SCHEMA_NAME}.fact_participation ADD PRIMARY KEY (participation_id);",
+    f"ALTER TABLE {SCHEMA_NAME}.fact_resultats_liste ADD PRIMARY KEY (resultat_liste_id);",
+]
+
 # Foreign key constraints to create after all tables are loaded
 FK_STATEMENTS = [
     f"""
