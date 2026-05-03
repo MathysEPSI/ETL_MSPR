@@ -94,9 +94,14 @@ def export_data_to_postgres(df: DataFrame, **kwargs) -> None:
                 drop_table_on_replace=True,
             )
 
-        print("4. Creating foreign key constraints...")
+        print("4. Creating primary key constraints...")
+        for stmt in PK_STATEMENTS:
+            loader.execute(stmt)
+            print("   PK constraint applied.")
+
+        print("5. Creating foreign key constraints...")
         for stmt in FK_STATEMENTS:
             loader.execute(stmt)
-            print(f"   FK constraint applied.")
+            print("   FK constraint applied.")
 
     print("Pipeline Complete! Star Schema with FK constraints exported to Supabase.")
