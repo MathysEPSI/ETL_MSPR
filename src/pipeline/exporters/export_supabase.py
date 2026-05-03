@@ -26,19 +26,39 @@ TABLE_ORDER = [
     'fact_resultats_liste',
 ]
 
+# Foreign key constraints to create after all tables are loaded
+FK_STATEMENTS = [
+    f"""
+    ALTER TABLE {SCHEMA_NAME}.fact_participation
+        ADD CONSTRAINT fk_fp_geo
+            FOREIGN KEY (geo_sk) REFERENCES {SCHEMA_NAME}.dim_geographie(geo_sk),
+        ADD CONSTRAINT fk_fp_election
+            FOREIGN KEY (election_sk) REFERENCES {SCHEMA_NAME}.dim_election(election_sk);
+    """,
+    f"""
+    ALTER TABLE {SCHEMA_NAME}.fact_resultats_liste
+        ADD CONSTRAINT fk_fr_geo
+            FOREIGN KEY (geo_sk) REFERENCES {SCHEMA_NAME}.dim_geographie(geo_sk),
+        ADD CONSTRAINT fk_fr_election
+            FOREIGN KEY (election_sk) REFERENCES {SCHEMA_NAME}.dim_election(election_sk),
+        ADD CONSTRAINT fk_fr_candidat
+            FOREIGN KEY (candidat_sk) REFERENCES {SCHEMA_NAME}.dim_candidat_liste(candidat_sk);
+    """,
+]
+
 
 @data_exporter
 def export_data_to_postgres(df: DataFrame, **kwargs) -> None:
     """
-    Builds a commune-level star schema using src.starschema.star_schema
-    and exports all 5 tables to Supabase via Postgres.
+    Builds a commune-level star schema using src.starschema.star_schema,
+    exports all 5 tables to Supabase, then creates FK constraints between them.
 
     Tables produced:
       - dim_geographie
       - dim_election
       - dim_candidat_liste
-      - fact_participation    (1 row = 1 commune × 1 tour × 1 annee)
-      - fact_resultats_liste  (1 row = 1 candidat/liste × 1 commune × 1 tour × 1 annee)
+      - fact_participation    (1 row = 1 commune x 1 tour x 1 annee)
+      - fact_resultats_liste  (1 row = 1 candidat/liste x 1 commune x 1 tour)
     """
     print("1. Building commune-level star schema...")
     tables = build_star_schema(df, include_unknown_members=False)
@@ -51,8 +71,10 @@ def export_data_to_postgres(df: DataFrame, **kwargs) -> None:
 
     print("2. Connecting to Supabase...")
     with Postgres.with_config(ConfigFileLoader(config_path, config_profile)) as loader:
+
+        print("3. Exporting tables (dimensions first, then facts)...")
         for table_name in TABLE_ORDER:
-            print(f"   Exporting {table_name} → schema '{SCHEMA_NAME}'...")
+            print(f"   Exporting {table_name} -> schema '{SCHEMA_NAME}'...")
             loader.export(
                 tables[table_name],
                 SCHEMA_NAME,
@@ -62,4 +84,9 @@ def export_data_to_postgres(df: DataFrame, **kwargs) -> None:
                 drop_table_on_replace=True,
             )
 
-    print("🎉 Pipeline Complete! Star Schema successfully exported to Supabase.")
+        print("4. Creating foreign key constraints...")
+        for stmt in FK_STATEMENTS:
+            loader.execute(stmt)
+            print(f"   FK constraint applied.")
+
+    print("Pipeline Complete! Star Schema with FK constraints exported to Supabase.")
