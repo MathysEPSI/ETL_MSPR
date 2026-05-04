@@ -2,30 +2,30 @@ source_code;target_table;canonical_metric;data_type;available_years
 AJCS25;tourism_accommodations;Auberges de jeunesse - Centres sportifs;NUM;2025
 AJCSLIT25;tourism_accommodations;Lits dans Auberges de jeunesse - Centre sportif;NUM;2025
 AJCSUH25;tourism_accommodations;Unités d'hébergements dans Auberges de jeunesse - Centres sportifs;NUM;2025
-BPE_2024_A501;equipements_services;Coiffure;CHAR;2001
-BPE_2024_B104;equipements_services;Hypermarché et grand magasin;CHAR;2004
-BPE_2024_B105;equipements_services;Supermarché et magasin multi-commerce;CHAR;2005
-BPE_2024_B201;equipements_services;Supérette;CHAR;2001
-BPE_2024_B202;equipements_services;Épicerie;CHAR;2002
-BPE_2024_B207;equipements_services;Boulangerie-pâtisserie;CHAR;2007
-BPE_2024_B316;equipements_services;Station-service;CHAR;2016
-BPE_2024_B326;equipements_services;Station de recharge de véhicules électriques;CHAR;2024
-BPE_2024_C107;equipements_services;École maternelle;CHAR;2007
-BPE_2024_C108;equipements_services;École primaire;CHAR;2008
-BPE_2024_C109;equipements_services;École élémentaire;CHAR;2009
-BPE_2024_C201;equipements_services;Collège;CHAR;2001
-BPE_2024_C301;equipements_services;Lycée d’enseignement général et/ou technologique;CHAR;2001
-BPE_2024_C302;equipements_services;Lycée d’enseignement professionnel;CHAR;2002
-BPE_2024_C303;equipements_services;Lycée d’enseignement agricole;CHAR;2003
-BPE_2024_C304;equipements_services;Enseignement général et technologique au sein d’un lycée professionnel;CHAR;2004
-BPE_2024_C305;equipements_services;Enseignement professionnel au sein d’un lycée d’enseignement général et/ou technologique;CHAR;2005
-BPE_2024_D250;equipements_services;Psychologue;CHAR;2024
-BPE_2024_D265;equipements_services;Médecin généraliste;CHAR;2024
-BPE_2024_D277;equipements_services;Chirurgien dentiste;CHAR;1977
-BPE_2024_D279;equipements_services;Masseur kinésithérapeute;CHAR;1979
-BPE_2024_D281;equipements_services;Infirmier;CHAR;1981
-BPE_2024_D307;equipements_services;Pharmacie;CHAR;2007
-BPE_2024_F307;equipements_services;Bibliothèque;CHAR;2007
+BPE_2024_A501;equipements_services;Coiffure;NUM;2001
+BPE_2024_B104;equipements_services;Hypermarché et grand magasin;NUM;2004
+BPE_2024_B105;equipements_services;Supermarché et magasin multi-commerce;NUM;2005
+BPE_2024_B201;equipements_services;Supérette;NUM;2001
+BPE_2024_B202;equipements_services;Épicerie;NUM;2002
+BPE_2024_B207;equipements_services;Boulangerie-pâtisserie;NUM;2007
+BPE_2024_B316;equipements_services;Station-service;NUM;2016
+BPE_2024_B326;equipements_services;Station de recharge de véhicules électriques;NUM;2024
+BPE_2024_C107;equipements_services;École maternelle;NUM;2007
+BPE_2024_C108;equipements_services;École primaire;NUM;2008
+BPE_2024_C109;equipements_services;École élémentaire;NUM;2009
+BPE_2024_C201;equipements_services;Collège;NUM;2001
+BPE_2024_C301;equipements_services;Lycée d’enseignement général et/ou technologique;NUM;2001
+BPE_2024_C302;equipements_services;Lycée d’enseignement professionnel;NUM;2002
+BPE_2024_C303;equipements_services;Lycée d’enseignement agricole;NUM;2003
+BPE_2024_C304;equipements_services;Enseignement général et technologique au sein d’un lycée professionnel;NUM;2004
+BPE_2024_C305;equipements_services;Enseignement professionnel au sein d’un lycée d’enseignement général et/ou technologique;NUM;2005
+BPE_2024_D250;equipements_services;Psychologue;NUM;2024
+BPE_2024_D265;equipements_services;Médecin généraliste;NUM;2024
+BPE_2024_D277;equipements_services;Chirurgien dentiste;NUM;1977
+BPE_2024_D279;equipements_services;Masseur kinésithérapeute;NUM;1979
+BPE_2024_D281;equipements_services;Infirmier;NUM;1981
+BPE_2024_D307;equipements_services;Pharmacie;NUM;2007
+BPE_2024_F307;equipements_services;Bibliothèque;NUM;2007
 C11_ACT1564;composition;Actifs 15-64 ans (compl);NUM;2011
 C11_ACT1564_CS1;composition;Actifs 15-64 ans Agriculteurs exploitants (compl);NUM;2011
 C11_ACT1564_CS2;composition;Actifs 15-64 ans Artisans, Comm., Chefs entr. (compl);NUM;2011
@@ -162,12 +162,12 @@ C11_POP55P_CS3;composition;Pop 55 ans ou plus Cadres, Prof. intel. sup. (compl);
 C11_POP55P_CS4;composition;Pop 55 ans ou plus Prof. intermédiaires (compl);NUM;2011
 C11_POP55P_CS5;composition;Pop 55 ans ou plus Employés (compl);NUM;2011
 C11_POP55P_CS6;composition;Pop 55 ans ou plus Ouvriers (compl);NUM;2011
-C11_RP_NORME;composition;Rés princ occupation norme;CHAR;2011
-C11_RP_SOUSOCC_ACC;composition;Rés princ sous-occupation accentuée;CHAR;2011
-C11_RP_SOUSOCC_MOD;composition;Rés princ sous-occupation modérée;CHAR;2011
-C11_RP_SOUSOCC_TACC;composition;Rés princ sous-occupation très accentuée;CHAR;2011
-C11_RP_SUROCC_ACC;composition;Rés princ suroccupation accentuée;CHAR;2011
-C11_RP_SUROCC_MOD;composition;Rés princ suroccupation modérée;CHAR;2011
+C11_RP_NORME;composition;Rés princ occupation norme;NUM;2011
+C11_RP_SOUSOCC_ACC;composition;Rés princ sous-occupation accentuée;NUM;2011
+C11_RP_SOUSOCC_MOD;composition;Rés princ sous-occupation modérée;NUM;2011
+C11_RP_SOUSOCC_TACC;composition;Rés princ sous-occupation très accentuée;NUM;2011
+C11_RP_SUROCC_ACC;composition;Rés princ suroccupation accentuée;NUM;2011
+C11_RP_SUROCC_MOD;composition;Rés princ suroccupation modérée;NUM;2011
 C16_ACT1564;composition;Actifs 15-64 ans (compl);NUM;2016
 C16_ACT1564_CS1;composition;Actifs 15-64 ans Agriculteurs exploitants (compl);NUM;2016
 C16_ACT1564_CS2;composition;Actifs 15-64 ans Artisans, Comm., Chefs entr. (compl);NUM;2016
@@ -304,12 +304,12 @@ C16_POP55P_CS3;composition;Pop 55 ans ou plus Cadres, Prof. intel. sup. (compl);
 C16_POP55P_CS4;composition;Pop 55 ans ou plus Prof. intermédiaires (compl);NUM;2016
 C16_POP55P_CS5;composition;Pop 55 ans ou plus Employés (compl);NUM;2016
 C16_POP55P_CS6;composition;Pop 55 ans ou plus Ouvriers (compl);NUM;2016
-C16_RP_NORME;composition;Rés princ occupation norme;CHAR;2016
-C16_RP_SOUSOCC_ACC;composition;Rés princ sous-occupation accentuée;CHAR;2016
-C16_RP_SOUSOCC_MOD;composition;Rés princ sous-occupation modérée;CHAR;2016
-C16_RP_SOUSOCC_TACC;composition;Rés princ sous-occupation très accentuée;CHAR;2016
-C16_RP_SUROCC_ACC;composition;Rés princ suroccupation accentuée;CHAR;2016
-C16_RP_SUROCC_MOD;composition;Rés princ suroccupation modérée;CHAR;2016
+C16_RP_NORME;composition;Rés princ occupation norme;NUM;2016
+C16_RP_SOUSOCC_ACC;composition;Rés princ sous-occupation accentuée;NUM;2016
+C16_RP_SOUSOCC_MOD;composition;Rés princ sous-occupation modérée;NUM;2016
+C16_RP_SOUSOCC_TACC;composition;Rés princ sous-occupation très accentuée;NUM;2016
+C16_RP_SUROCC_ACC;composition;Rés princ suroccupation accentuée;NUM;2016
+C16_RP_SUROCC_MOD;composition;Rés princ suroccupation modérée;NUM;2016
 C22_ACT1564;composition;Actifs 15-64 ans (compl);NUM;2022
 C22_ACT1564_STAT_GSEC11_21;composition;Actifs 15-64 ans Agriculteurs exploitants (compl);NUM;2022
 C22_ACT1564_STAT_GSEC12_22;composition;Actifs 15-64 ans Artisans, Comm., Chefs entr. (compl);NUM;2022
@@ -419,7 +419,7 @@ C22_PMEN1FCOUPSENF;composition;Pop Men 1 fam Couple sans enfant (compl);NUM;2022
 C22_PMEN1FCOUPUNIQENFCOUP;composition;Pop Men  1 fam Couple avec uniquement enfant(s) du couple (compl);NUM;2022
 C22_PMEN1FMONOF;composition;Pop Mén 1 fam monoparentale Femmes (compl);NUM;2022
 C22_PMEN1FMONOH;composition;Pop Mén 1 fam monoparentale Hommes (compl);NUM;2022
-C22_PMENFAM;composition;Pop ménage d’une famille (compl);CHAR;2022
+C22_PMENFAM;composition;Pop ménage d’une famille (compl);NUM;2022
 C22_PMEN_MENCOUPAENF;composition;Pop mén fam princ Couple avec enfant(s) (compl);NUM;2022
 C22_PMEN_MENCOUPSENF;composition;Pop mén fam princ Couple sans enfant (compl);NUM;2022
 C22_PMEN_MENFAM;composition;Pop mén avec famille(s) (compl);NUM;2022
@@ -466,12 +466,12 @@ C22_POP55P_STAT_GSEC13_23;composition;Pop 55 ans ou plus Cadres, Prof. intel. su
 C22_POP55P_STAT_GSEC14_24;composition;Pop 55 ans ou plus Prof. intermédiaires (compl);NUM;2022
 C22_POP55P_STAT_GSEC15_25;composition;Pop 55 ans ou plus Employés (compl);NUM;2022
 C22_POP55P_STAT_GSEC16_26;composition;Pop 55 ans ou plus Ouvriers (compl);NUM;2022
-C22_RP_NORME;composition;Rés princ occupation norme;CHAR;2022
-C22_RP_SOUSOCC_ACC;composition;Rés princ sous-occupation accentuée;CHAR;2022
-C22_RP_SOUSOCC_MOD;composition;Rés princ sous-occupation modérée;CHAR;2022
-C22_RP_SOUSOCC_TACC;composition;Rés princ sous-occupation très accentuée;CHAR;2022
-C22_RP_SUROCC_ACC;composition;Rés princ suroccupation accentuée;CHAR;2022
-C22_RP_SUROCC_MOD;composition;Rés princ suroccupation modérée;CHAR;2022
+C22_RP_NORME;composition;Rés princ occupation norme;NUM;2022
+C22_RP_SOUSOCC_ACC;composition;Rés princ sous-occupation accentuée;NUM;2022
+C22_RP_SOUSOCC_MOD;composition;Rés princ sous-occupation modérée;NUM;2022
+C22_RP_SOUSOCC_TACC;composition;Rés princ sous-occupation très accentuée;NUM;2022
+C22_RP_SUROCC_ACC;composition;Rés princ suroccupation accentuée;NUM;2022
+C22_RP_SUROCC_MOD;composition;Rés princ suroccupation modérée;NUM;2022
 CPG025;tourism_accommodations;Campings non classés;NUM;2025
 CPG125;tourism_accommodations;Campings classés 1 étoile;NUM;2025
 CPG225;tourism_accommodations;Campings classés 2 étoiles;NUM;2025
@@ -500,36 +500,36 @@ CPGEO25;tourism_accommodations;Emplacements offerts clientèle de passage dans c
 CPGEO325;tourism_accommodations;Emplacements offerts clientèle de passage campings classés 3 étoiles;NUM;2025
 CPGEO425;tourism_accommodations;Emplacements offerts clientèle de passage campings classés 4 étoiles;NUM;2025
 CPGEO525;tourism_accommodations;Emplacements offerts clientèle de passage campings classés 5 étoiles;NUM;2025
-D121;fiscal;1er décile du niveau de vie (€);CHAR;2021
+D121;fiscal;1er décile du niveau de vie (€);NUM;2021
 D68_LOG;historical_demography;Logements (dnbt);NUM;1968
 D68_LOGVAC;historical_demography;Logements vacants (dnbt);NUM;1968
 D68_NPER_RP;historical_demography;Pop Ménages (Pop Rés princ) (dnbt);NUM;1968
-D68_POP;historical_demography;Population (dnbt);CHAR;1968
+D68_POP;historical_demography;Population (dnbt);NUM;1968
 D68_RP;historical_demography;Résidences principales (Ménages) (dnbt);NUM;1968
 D68_RSECOCC;historical_demography;Rés secondaires et logts occasionnels (dnbt);NUM;1968
 D75_LOG;historical_demography;Logements (dnbt);NUM;1975
 D75_LOGVAC;historical_demography;Logements vacants (dnbt);NUM;1975
 D75_NPER_RP;historical_demography;Pop Ménages (Pop Rés princ) (dnbt);NUM;1975
-D75_POP;historical_demography;Population (dnbt);CHAR;1975
+D75_POP;historical_demography;Population (dnbt);NUM;1975
 D75_RP;historical_demography;Résidences principales (Ménages) (dnbt);NUM;1975
 D75_RSECOCC;historical_demography;Rés secondaires et logts occasionnels (dnbt);NUM;1975
 D82_LOG;historical_demography;Logements (dnbt);NUM;1982
 D82_LOGVAC;historical_demography;Logements vacants (dnbt);NUM;1982
 D82_NPER_RP;historical_demography;Pop Ménages (Pop Rés princ) (dnbt);NUM;1982
-D82_POP;historical_demography;Population (dnbt);CHAR;1982
+D82_POP;historical_demography;Population (dnbt);NUM;1982
 D82_RP;historical_demography;Résidences principales (Ménages) (dnbt);NUM;1982
 D82_RSECOCC;historical_demography;Rés secondaires et logts occasionnels (dnbt);NUM;1982
 D90_LOG;historical_demography;Logements (dnbt);NUM;1990
 D90_LOGVAC;historical_demography;Logements vacants (dnbt);NUM;1990
 D90_NPER_RP;historical_demography;Pop Ménages (Pop Rés princ) (dnbt);NUM;1990
-D90_POP;historical_demography;Population (dnbt);CHAR;1990
+D90_POP;historical_demography;Population (dnbt);NUM;1990
 D90_RP;historical_demography;Résidences principales (Ménages) (dnbt);NUM;1990
 D90_RSECOCC;historical_demography;Rés secondaires et logts occasionnels (dnbt);NUM;1990
-D921;fiscal;9e décile du niveau de vie (€);CHAR;2021
+D921;fiscal;9e décile du niveau de vie (€);NUM;2021
 D99_LOG;historical_demography;Logements (dnbt);NUM;1999
 D99_LOGVAC;historical_demography;Logements vacants (dnbt);NUM;1999
 D99_PMEN;historical_demography;Pop Ménages (Pop Rés princ) (dnbt);NUM;1999
-D99_POP;historical_demography;Population (dnbt);CHAR;1999
+D99_POP;historical_demography;Population (dnbt);NUM;1999
 D99_RP;historical_demography;Résidences principales (Ménages) (dnbt);NUM;1999
 D99_RSECOCC;historical_demography;Rés secondaires et logts occasionnels (dnbt);NUM;1999
 DECESD14;births_deaths;Décès domiciliés;NUM;2014
@@ -578,19 +578,19 @@ ENCLZ24;creation_entreprises;Créations d'entr. d’activités immobilières;NUM
 ENCMN24;creation_entreprises;Créations d'entr. d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2024
 ENCOQ24;creation_entreprises;Créations d'entr. du secteur adm publ, enseign, santé et action sociale;NUM;2024
 ENCRU24;creation_entreprises;Créations d'entr. des autres activités de services;NUM;2024
-ENCTOT12;creation_entreprises;Créations d'entr.;CHAR;2012
-ENCTOT13;creation_entreprises;Créations d'entr.;CHAR;2013
-ENCTOT14;creation_entreprises;Créations d'entr.;CHAR;2014
-ENCTOT15;creation_entreprises;Créations d'entr.;CHAR;2015
-ENCTOT16;creation_entreprises;Créations d'entr.;CHAR;2016
-ENCTOT17;creation_entreprises;Créations d'entr.;CHAR;2017
-ENCTOT18;creation_entreprises;Créations d'entr.;CHAR;2018
-ENCTOT19;creation_entreprises;Créations d'entr.;CHAR;2019
-ENCTOT20;creation_entreprises;Créations d'entr.;CHAR;2020
-ENCTOT21;creation_entreprises;Créations d'entr.;CHAR;2021
-ENCTOT22;creation_entreprises;Créations d'entr.;CHAR;2022
-ENCTOT23;creation_entreprises;Créations d'entr.;CHAR;2023
-ENCTOT24;creation_entreprises;Créations d'entr.;CHAR;2024
+ENCTOT12;creation_entreprises;Créations d'entr.;NUM;2012
+ENCTOT13;creation_entreprises;Créations d'entr.;NUM;2013
+ENCTOT14;creation_entreprises;Créations d'entr.;NUM;2014
+ENCTOT15;creation_entreprises;Créations d'entr.;NUM;2015
+ENCTOT16;creation_entreprises;Créations d'entr.;NUM;2016
+ENCTOT17;creation_entreprises;Créations d'entr.;NUM;2017
+ENCTOT18;creation_entreprises;Créations d'entr.;NUM;2018
+ENCTOT19;creation_entreprises;Créations d'entr.;NUM;2019
+ENCTOT20;creation_entreprises;Créations d'entr.;NUM;2020
+ENCTOT21;creation_entreprises;Créations d'entr.;NUM;2021
+ENCTOT22;creation_entreprises;Créations d'entr.;NUM;2022
+ENCTOT23;creation_entreprises;Créations d'entr.;NUM;2023
+ENCTOT24;creation_entreprises;Créations d'entr.;NUM;2024
 ENNBE23;employment;Unités légales de l'industrie économiquement actives;NUM;2023
 ENNFZ23;employment;Unités légales de la construction économiquement actives;NUM;2023
 ENNGI23;employment;Unités légales de commerce, transp, restau, héberg. économiquement actives;NUM;2023
@@ -615,136 +615,136 @@ ETBE123;employment;Établissements industrie 1 à 9 salariés fin 2023;NUM;2023
 ETBE2023;employment;Établissements industrie 20 à 49 salariés fin 2023;NUM;2023
 ETBE23;employment;Établissements industrie fin 2023;NUM;2023
 ETBE5023;employment;Établissements industrie 50 salariés ou plus fin 2023;NUM;2023
-ETCBE12;creation_sectors;Créations d'ets de l'industrie;CHAR;2012
-ETCBE13;creation_sectors;Créations d'ets de l'industrie;CHAR;2013
-ETCBE14;creation_sectors;Créations d'ets de l'industrie;CHAR;2014
-ETCBE15;creation_sectors;Créations d'ets de l'industrie;CHAR;2015
-ETCBE16;creation_sectors;Créations d'ets de l'industrie;CHAR;2016
-ETCBE17;creation_sectors;Créations d'ets de l'industrie;CHAR;2017
-ETCBE18;creation_sectors;Créations d'ets de l'industrie;CHAR;2018
-ETCBE19;creation_sectors;Créations d'ets de l'industrie;CHAR;2019
-ETCBE20;creation_sectors;Créations d'ets de l'industrie;CHAR;2020
-ETCBE21;creation_sectors;Créations d'ets de l'industrie;CHAR;2021
-ETCBE22;creation_sectors;Créations d'ets de l'industrie;CHAR;2022
-ETCBE23;creation_sectors;Créations d'ets de l'industrie;CHAR;2023
-ETCBE24;creation_sectors;Créations d'ets de l'industrie;CHAR;2024
-ETCFZ12;creation_sectors;Créations d'ets de la construction;CHAR;2012
-ETCFZ13;creation_sectors;Créations d'ets de la construction;CHAR;2013
-ETCFZ14;creation_sectors;Créations d'ets de la construction;CHAR;2014
-ETCFZ15;creation_sectors;Créations d'ets de la construction;CHAR;2015
-ETCFZ16;creation_sectors;Créations d'ets de la construction;CHAR;2016
-ETCFZ17;creation_sectors;Créations d'ets de la construction;CHAR;2017
-ETCFZ18;creation_sectors;Créations d'ets de la construction;CHAR;2018
-ETCFZ19;creation_sectors;Créations d'ets de la construction;CHAR;2019
-ETCFZ20;creation_sectors;Créations d'ets de la construction;CHAR;2020
-ETCFZ21;creation_sectors;Créations d'ets de la construction;CHAR;2021
-ETCFZ22;creation_sectors;Créations d'ets de la construction;CHAR;2022
-ETCFZ23;creation_sectors;Créations d'ets de la construction;CHAR;2023
-ETCFZ24;creation_sectors;Créations d'ets de la construction;CHAR;2024
-ETCGI12;creation_sectors;Créations d'ets de comm, transp, restau héberg.;CHAR;2012
-ETCGI13;creation_sectors;Créations d'ets de comm, transp, restau héberg.;CHAR;2013
-ETCGI14;creation_sectors;Créations d'ets de comm, transp, restau héberg.;CHAR;2014
-ETCGI15;creation_sectors;Créations d'ets de comm, transp, restau héberg.;CHAR;2015
-ETCGI16;creation_sectors;Créations d'ets de comm, transp, restau héberg.;CHAR;2016
-ETCGI17;creation_sectors;Créations d'ets de comm, transp, restau héberg.;CHAR;2017
-ETCGI18;creation_sectors;Créations d'ets de comm, transp, restau héberg.;CHAR;2018
-ETCGI19;creation_sectors;Créations d'ets de comm, transp, restau héberg.;CHAR;2019
-ETCGI20;creation_sectors;Créations d'ets de comm, transp, restau héberg.;CHAR;2020
-ETCGI21;creation_sectors;Créations d'ets de comm, transp, restau héberg.;CHAR;2021
-ETCGI22;creation_sectors;Créations d'ets de comm, transp, restau héberg.;CHAR;2022
-ETCGI23;creation_sectors;Créations d'ets de comm, transp, restau héberg.;CHAR;2023
-ETCGI24;creation_sectors;Créations d'ets de comm, transp, restau héberg.;CHAR;2024
-ETCJZ12;creation_sectors;Créations d'ets d’information et communication;CHAR;2012
-ETCJZ13;creation_sectors;Créations d'ets d’information et communication;CHAR;2013
-ETCJZ14;creation_sectors;Créations d'ets d’information et communication;CHAR;2014
-ETCJZ15;creation_sectors;Créations d'ets d’information et communication;CHAR;2015
-ETCJZ16;creation_sectors;Créations d'ets d’information et communication;CHAR;2016
-ETCJZ17;creation_sectors;Créations d'ets d’information et communication;CHAR;2017
-ETCJZ18;creation_sectors;Créations d'ets d’information et communication;CHAR;2018
-ETCJZ19;creation_sectors;Créations d'ets d’information et communication;CHAR;2019
-ETCJZ20;creation_sectors;Créations d'ets d’information et communication;CHAR;2020
-ETCJZ21;creation_sectors;Créations d'ets d’information et communication;CHAR;2021
-ETCJZ22;creation_sectors;Créations d'ets d’information et communication;CHAR;2022
-ETCJZ23;creation_sectors;Créations d'ets d’information et communication;CHAR;2023
-ETCJZ24;creation_sectors;Créations d'ets d’information et communication;CHAR;2024
-ETCKZ12;creation_sectors;Créations d'ets d’activités financières et d'assurance;CHAR;2012
-ETCKZ13;creation_sectors;Créations d'ets d’activités financières et d'assurance;CHAR;2013
-ETCKZ14;creation_sectors;Créations d'ets d’activités financières et d'assurance;CHAR;2014
-ETCKZ15;creation_sectors;Créations d'ets d’activités financières et d'assurance;CHAR;2015
-ETCKZ16;creation_sectors;Créations d'ets d’activités financières et d'assurance;CHAR;2016
-ETCKZ17;creation_sectors;Créations d'ets d’activités financières et d'assurance;CHAR;2017
-ETCKZ18;creation_sectors;Créations d'ets d’activités financières et d'assurance;CHAR;2018
-ETCKZ19;creation_sectors;Créations d'ets d’activités financières et d'assurance;CHAR;2019
-ETCKZ20;creation_sectors;Créations d'ets d’activités financières et d'assurance;CHAR;2020
-ETCKZ21;creation_sectors;Créations d'ets d’activités financières et d'assurance;CHAR;2021
-ETCKZ22;creation_sectors;Créations d'ets d’activités financières et d'assurance;CHAR;2022
-ETCKZ23;creation_sectors;Créations d'ets d’activités financières et d'assurance;CHAR;2023
-ETCKZ24;creation_sectors;Créations d'ets d’activités financières et d'assurance;CHAR;2024
-ETCLZ12;creation_sectors;Créations d'ets d’activités immobilières;CHAR;2012
-ETCLZ13;creation_sectors;Créations d'ets d’activités immobilières;CHAR;2013
-ETCLZ14;creation_sectors;Créations d'ets d’activités immobilières;CHAR;2014
-ETCLZ15;creation_sectors;Créations d'ets d’activités immobilières;CHAR;2015
-ETCLZ16;creation_sectors;Créations d'ets d’activités immobilières;CHAR;2016
-ETCLZ17;creation_sectors;Créations d'ets d’activités immobilières;CHAR;2017
-ETCLZ18;creation_sectors;Créations d'ets d’activités immobilières;CHAR;2018
-ETCLZ19;creation_sectors;Créations d'ets d’activités immobilières;CHAR;2019
-ETCLZ20;creation_sectors;Créations d'ets d’activités immobilières;CHAR;2020
-ETCLZ21;creation_sectors;Créations d'ets d’activités immobilières;CHAR;2021
-ETCLZ22;creation_sectors;Créations d'ets d’activités immobilières;CHAR;2022
-ETCLZ23;creation_sectors;Créations d'ets d’activités immobilières;CHAR;2023
-ETCLZ24;creation_sectors;Créations d'ets d’activités immobilières;CHAR;2024
-ETCMN12;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;CHAR;2012
-ETCMN13;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;CHAR;2013
-ETCMN14;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;CHAR;2014
-ETCMN15;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;CHAR;2015
-ETCMN16;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;CHAR;2016
-ETCMN17;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;CHAR;2017
-ETCMN18;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;CHAR;2018
-ETCMN19;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;CHAR;2019
-ETCMN20;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;CHAR;2020
-ETCMN21;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;CHAR;2021
-ETCMN22;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;CHAR;2022
-ETCMN23;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;CHAR;2023
-ETCMN24;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;CHAR;2024
-ETCOQ12;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;CHAR;2012
-ETCOQ13;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;CHAR;2013
-ETCOQ14;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;CHAR;2014
-ETCOQ15;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;CHAR;2015
-ETCOQ16;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;CHAR;2016
-ETCOQ17;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;CHAR;2017
-ETCOQ18;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;CHAR;2018
-ETCOQ19;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;CHAR;2019
-ETCOQ20;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;CHAR;2020
-ETCOQ21;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;CHAR;2021
-ETCOQ22;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;CHAR;2022
-ETCOQ23;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;CHAR;2023
-ETCOQ24;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;CHAR;2024
-ETCRU12;creation_sectors;Créations d'ets des autres activités de services;CHAR;2012
-ETCRU13;creation_sectors;Créations d'ets des autres activités de services;CHAR;2013
-ETCRU14;creation_sectors;Créations d'ets des autres activités de services;CHAR;2014
-ETCRU15;creation_sectors;Créations d'ets des autres activités de services;CHAR;2015
-ETCRU16;creation_sectors;Créations d'ets des autres activités de services;CHAR;2016
-ETCRU17;creation_sectors;Créations d'ets des autres activités de services;CHAR;2017
-ETCRU18;creation_sectors;Créations d'ets des autres activités de services;CHAR;2018
-ETCRU19;creation_sectors;Créations d'ets des autres activités de services;CHAR;2019
-ETCRU20;creation_sectors;Créations d'ets des autres activités de services;CHAR;2020
-ETCRU21;creation_sectors;Créations d'ets des autres activités de services;CHAR;2021
-ETCRU22;creation_sectors;Créations d'ets des autres activités de services;CHAR;2022
-ETCRU23;creation_sectors;Créations d'ets des autres activités de services;CHAR;2023
-ETCRU24;creation_sectors;Créations d'ets des autres activités de services;CHAR;2024
-ETCTOT12;creation_sectors;Créations d'ets;CHAR;2012
-ETCTOT13;creation_sectors;Créations d'ets;CHAR;2013
-ETCTOT14;creation_sectors;Créations d'ets;CHAR;2014
-ETCTOT15;creation_sectors;Créations d'ets;CHAR;2015
-ETCTOT16;creation_sectors;Créations d'ets;CHAR;2016
-ETCTOT17;creation_sectors;Créations d'ets;CHAR;2017
-ETCTOT18;creation_sectors;Créations d'ets;CHAR;2018
-ETCTOT19;creation_sectors;Créations d'ets;CHAR;2019
-ETCTOT20;creation_sectors;Créations d'ets;CHAR;2020
-ETCTOT21;creation_sectors;Créations d'ets;CHAR;2021
-ETCTOT22;creation_sectors;Créations d'ets;CHAR;2022
-ETCTOT23;creation_sectors;Créations d'ets;CHAR;2023
-ETCTOT24;creation_sectors;Créations d'ets;CHAR;2024
+ETCBE12;creation_sectors;Créations d'ets de l'industrie;NUM;2012
+ETCBE13;creation_sectors;Créations d'ets de l'industrie;NUM;2013
+ETCBE14;creation_sectors;Créations d'ets de l'industrie;NUM;2014
+ETCBE15;creation_sectors;Créations d'ets de l'industrie;NUM;2015
+ETCBE16;creation_sectors;Créations d'ets de l'industrie;NUM;2016
+ETCBE17;creation_sectors;Créations d'ets de l'industrie;NUM;2017
+ETCBE18;creation_sectors;Créations d'ets de l'industrie;NUM;2018
+ETCBE19;creation_sectors;Créations d'ets de l'industrie;NUM;2019
+ETCBE20;creation_sectors;Créations d'ets de l'industrie;NUM;2020
+ETCBE21;creation_sectors;Créations d'ets de l'industrie;NUM;2021
+ETCBE22;creation_sectors;Créations d'ets de l'industrie;NUM;2022
+ETCBE23;creation_sectors;Créations d'ets de l'industrie;NUM;2023
+ETCBE24;creation_sectors;Créations d'ets de l'industrie;NUM;2024
+ETCFZ12;creation_sectors;Créations d'ets de la construction;NUM;2012
+ETCFZ13;creation_sectors;Créations d'ets de la construction;NUM;2013
+ETCFZ14;creation_sectors;Créations d'ets de la construction;NUM;2014
+ETCFZ15;creation_sectors;Créations d'ets de la construction;NUM;2015
+ETCFZ16;creation_sectors;Créations d'ets de la construction;NUM;2016
+ETCFZ17;creation_sectors;Créations d'ets de la construction;NUM;2017
+ETCFZ18;creation_sectors;Créations d'ets de la construction;NUM;2018
+ETCFZ19;creation_sectors;Créations d'ets de la construction;NUM;2019
+ETCFZ20;creation_sectors;Créations d'ets de la construction;NUM;2020
+ETCFZ21;creation_sectors;Créations d'ets de la construction;NUM;2021
+ETCFZ22;creation_sectors;Créations d'ets de la construction;NUM;2022
+ETCFZ23;creation_sectors;Créations d'ets de la construction;NUM;2023
+ETCFZ24;creation_sectors;Créations d'ets de la construction;NUM;2024
+ETCGI12;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2012
+ETCGI13;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2013
+ETCGI14;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2014
+ETCGI15;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2015
+ETCGI16;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2016
+ETCGI17;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2017
+ETCGI18;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2018
+ETCGI19;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2019
+ETCGI20;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2020
+ETCGI21;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2021
+ETCGI22;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2022
+ETCGI23;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2023
+ETCGI24;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2024
+ETCJZ12;creation_sectors;Créations d'ets d’information et communication;NUM;2012
+ETCJZ13;creation_sectors;Créations d'ets d’information et communication;NUM;2013
+ETCJZ14;creation_sectors;Créations d'ets d’information et communication;NUM;2014
+ETCJZ15;creation_sectors;Créations d'ets d’information et communication;NUM;2015
+ETCJZ16;creation_sectors;Créations d'ets d’information et communication;NUM;2016
+ETCJZ17;creation_sectors;Créations d'ets d’information et communication;NUM;2017
+ETCJZ18;creation_sectors;Créations d'ets d’information et communication;NUM;2018
+ETCJZ19;creation_sectors;Créations d'ets d’information et communication;NUM;2019
+ETCJZ20;creation_sectors;Créations d'ets d’information et communication;NUM;2020
+ETCJZ21;creation_sectors;Créations d'ets d’information et communication;NUM;2021
+ETCJZ22;creation_sectors;Créations d'ets d’information et communication;NUM;2022
+ETCJZ23;creation_sectors;Créations d'ets d’information et communication;NUM;2023
+ETCJZ24;creation_sectors;Créations d'ets d’information et communication;NUM;2024
+ETCKZ12;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2012
+ETCKZ13;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2013
+ETCKZ14;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2014
+ETCKZ15;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2015
+ETCKZ16;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2016
+ETCKZ17;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2017
+ETCKZ18;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2018
+ETCKZ19;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2019
+ETCKZ20;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2020
+ETCKZ21;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2021
+ETCKZ22;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2022
+ETCKZ23;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2023
+ETCKZ24;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2024
+ETCLZ12;creation_sectors;Créations d'ets d’activités immobilières;NUM;2012
+ETCLZ13;creation_sectors;Créations d'ets d’activités immobilières;NUM;2013
+ETCLZ14;creation_sectors;Créations d'ets d’activités immobilières;NUM;2014
+ETCLZ15;creation_sectors;Créations d'ets d’activités immobilières;NUM;2015
+ETCLZ16;creation_sectors;Créations d'ets d’activités immobilières;NUM;2016
+ETCLZ17;creation_sectors;Créations d'ets d’activités immobilières;NUM;2017
+ETCLZ18;creation_sectors;Créations d'ets d’activités immobilières;NUM;2018
+ETCLZ19;creation_sectors;Créations d'ets d’activités immobilières;NUM;2019
+ETCLZ20;creation_sectors;Créations d'ets d’activités immobilières;NUM;2020
+ETCLZ21;creation_sectors;Créations d'ets d’activités immobilières;NUM;2021
+ETCLZ22;creation_sectors;Créations d'ets d’activités immobilières;NUM;2022
+ETCLZ23;creation_sectors;Créations d'ets d’activités immobilières;NUM;2023
+ETCLZ24;creation_sectors;Créations d'ets d’activités immobilières;NUM;2024
+ETCMN12;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2012
+ETCMN13;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2013
+ETCMN14;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2014
+ETCMN15;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2015
+ETCMN16;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2016
+ETCMN17;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2017
+ETCMN18;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2018
+ETCMN19;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2019
+ETCMN20;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2020
+ETCMN21;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2021
+ETCMN22;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2022
+ETCMN23;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2023
+ETCMN24;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2024
+ETCOQ12;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2012
+ETCOQ13;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2013
+ETCOQ14;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2014
+ETCOQ15;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2015
+ETCOQ16;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2016
+ETCOQ17;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2017
+ETCOQ18;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2018
+ETCOQ19;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2019
+ETCOQ20;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2020
+ETCOQ21;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2021
+ETCOQ22;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2022
+ETCOQ23;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2023
+ETCOQ24;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2024
+ETCRU12;creation_sectors;Créations d'ets des autres activités de services;NUM;2012
+ETCRU13;creation_sectors;Créations d'ets des autres activités de services;NUM;2013
+ETCRU14;creation_sectors;Créations d'ets des autres activités de services;NUM;2014
+ETCRU15;creation_sectors;Créations d'ets des autres activités de services;NUM;2015
+ETCRU16;creation_sectors;Créations d'ets des autres activités de services;NUM;2016
+ETCRU17;creation_sectors;Créations d'ets des autres activités de services;NUM;2017
+ETCRU18;creation_sectors;Créations d'ets des autres activités de services;NUM;2018
+ETCRU19;creation_sectors;Créations d'ets des autres activités de services;NUM;2019
+ETCRU20;creation_sectors;Créations d'ets des autres activités de services;NUM;2020
+ETCRU21;creation_sectors;Créations d'ets des autres activités de services;NUM;2021
+ETCRU22;creation_sectors;Créations d'ets des autres activités de services;NUM;2022
+ETCRU23;creation_sectors;Créations d'ets des autres activités de services;NUM;2023
+ETCRU24;creation_sectors;Créations d'ets des autres activités de services;NUM;2024
+ETCTOT12;creation_sectors;Créations d'ets;NUM;2012
+ETCTOT13;creation_sectors;Créations d'ets;NUM;2013
+ETCTOT14;creation_sectors;Créations d'ets;NUM;2014
+ETCTOT15;creation_sectors;Créations d'ets;NUM;2015
+ETCTOT16;creation_sectors;Créations d'ets;NUM;2016
+ETCTOT17;creation_sectors;Créations d'ets;NUM;2017
+ETCTOT18;creation_sectors;Créations d'ets;NUM;2018
+ETCTOT19;creation_sectors;Créations d'ets;NUM;2019
+ETCTOT20;creation_sectors;Créations d'ets;NUM;2020
+ETCTOT21;creation_sectors;Créations d'ets;NUM;2021
+ETCTOT22;creation_sectors;Créations d'ets;NUM;2022
+ETCTOT23;creation_sectors;Créations d'ets;NUM;2023
+ETCTOT24;creation_sectors;Créations d'ets;NUM;2024
 ETFZ023;employment;Établissements construction sans salarié fin 2023;NUM;2023
 ETFZ1023;employment;Établissements construction 10 à 19 salariés fin 2023;NUM;2023
 ETFZ123;employment;Établissements construction 1 à 9 salariés fin 2023;NUM;2023
@@ -837,7 +837,7 @@ HTCH25;tourism_accommodations;Chambres dans hôtels;NUM;2025
 HTCH325;tourism_accommodations;Chambres dans hôtels classés 3 étoiles;NUM;2025
 HTCH425;tourism_accommodations;Chambres dans hôtels classés 4 étoiles;NUM;2025
 HTCH525;tourism_accommodations;Chambres dans hôtels classés 5 étoiles;NUM;2025
-MED21;fiscal;Médiane du niveau vie (€);CHAR;2021
+MED21;fiscal;Médiane du niveau vie (€);NUM;2021
 NAISD14;births_deaths;Naissances domiciliées;NUM;2014
 NAISD15;births_deaths;Naissances domiciliées;NUM;2015
 NAISD16;births_deaths;Naissances domiciliées;NUM;2016
@@ -854,7 +854,7 @@ NBPERSMENFISC21;fiscal;Nombre de personnes dans les ménages fiscaux;NUM;2021
 P06_LOG;population;Logements (princ);NUM;2006
 P06_LOGVAC;population;Logements vacants (princ);NUM;2006
 P06_PMEN;population;Pop Ménages (Pop Rés princ) (princ);NUM;2006
-P06_POP;population;Population (princ);CHAR;2006
+P06_POP;population;Population (princ);NUM;2006
 P06_RP;population;Résidences principales (Ménages) (princ);NUM;2006
 P06_RSECOCC;population;Rés secondaires et logts occasionnels (princ);NUM;2006
 P11_ACT1524;population;Actifs 15-24 ans (princ);NUM;2011
@@ -881,11 +881,11 @@ P11_ACTOCC15P_VOITURE;population;Actifs occ 15 ans ou plus voiture (princ);NUM;2
 P11_ACTOCC2554;population;Actifs occupés 25-54 ans (princ);NUM;2011
 P11_ACTOCC5564;population;Actifs occupés 55-64 ans (princ);NUM;2011
 P11_AINACT1564;population;Autres inactifs 15-64 ans (princ);NUM;2011
-P11_ANEM_RP;population;Anc tot Emméngt Rés princ (années) (princ);CHAR;2011
-P11_ANEM_RP_GRAT;population;Anc tot Emméngt Rés princ occ gratuit (années) (princ);CHAR;2011
-P11_ANEM_RP_LOC;population;Anc tot Emméngt Rés princ occ par Locataires (années) (princ);CHAR;2011
-P11_ANEM_RP_LOCHLMV;population;Anc tot Emméngt Rés princ HLM louées vides (années) (princ);CHAR;2011
-P11_ANEM_RP_PROP;population;Anc tot Emméngt Rés princ occ par Propriétaires (années) (princ);CHAR;2011
+P11_ANEM_RP;population;Anc tot Emméngt Rés princ (années) (princ);NUM;2011
+P11_ANEM_RP_GRAT;population;Anc tot Emméngt Rés princ occ gratuit (années) (princ);NUM;2011
+P11_ANEM_RP_LOC;population;Anc tot Emméngt Rés princ occ par Locataires (années) (princ);NUM;2011
+P11_ANEM_RP_LOCHLMV;population;Anc tot Emméngt Rés princ HLM louées vides (années) (princ);NUM;2011
+P11_ANEM_RP_PROP;population;Anc tot Emméngt Rés princ occ par Propriétaires (années) (princ);NUM;2011
 P11_APPART;population;Appartements (princ);NUM;2011
 P11_CHOM1564;population;Chômeurs 15-64 ans (princ);NUM;2011
 P11_EMPLT;population;Emplois au LT (princ);NUM;2011
@@ -1066,12 +1066,12 @@ P11_NSCOL15P_CAPBEP;population;Pop 15 ans ou plus non scol. CAP-BEP (princ);NUM;
 P11_NSCOL15P_CEP;population;Pop 15 ans ou plus non scol. CEP (princ);NUM;2011
 P11_NSCOL15P_DIPL0;population;Pop 15 ans ou plus non scol. Sans diplôme (princ);NUM;2011
 P11_NSCOL15P_SUP;population;Pop 15 ans ou plus non scol. Enseignement sup long (princ);NUM;2011
-P11_PMEN;population;Pop ménages (princ);CHAR;2011
-P11_PMEN_ANEM0002;population;Pop mén emménagés moins 2 ans (princ);CHAR;2011
-P11_PMEN_ANEM0204;population;Pop mén emménagés entre 2-4 ans (princ);CHAR;2011
-P11_PMEN_ANEM0509;population;Pop mén emménagés entre 5-9 ans (princ);CHAR;2011
-P11_PMEN_ANEM10P;population;Pop mén emménagés depuis 10 ans ou plus (princ);CHAR;2011
-P11_POP;population;Population (princ);CHAR;2011
+P11_PMEN;population;Pop ménages (princ);NUM;2011
+P11_PMEN_ANEM0002;population;Pop mén emménagés moins 2 ans (princ);NUM;2011
+P11_PMEN_ANEM0204;population;Pop mén emménagés entre 2-4 ans (princ);NUM;2011
+P11_PMEN_ANEM0509;population;Pop mén emménagés entre 5-9 ans (princ);NUM;2011
+P11_PMEN_ANEM10P;population;Pop mén emménagés depuis 10 ans ou plus (princ);NUM;2011
+P11_POP;population;Population (princ);NUM;2011
 P11_POP0014;population;Pop 0-14 ans (princ);NUM;2011
 P11_POP0114_IRAN2;population;Pop 1-14 ans habitant 1 an avt autre logt même commune (princ);NUM;2011
 P11_POP0114_IRAN2P;population;Pop 1-14 ans habitant 1 an avt autre logt (princ);NUM;2011
@@ -1218,11 +1218,11 @@ P16_ACTOCC15P_VOITURE;population;Actifs occ 15 ans ou plus voiture (princ);NUM;2
 P16_ACTOCC2554;population;Actifs occupés 25-54 ans (princ);NUM;2016
 P16_ACTOCC5564;population;Actifs occupés 55-64 ans (princ);NUM;2016
 P16_AINACT1564;population;Autres inactifs 15-64 ans (princ);NUM;2016
-P16_ANEM_RP;population;Anc tot Emméngt Rés princ (années) (princ);CHAR;2016
-P16_ANEM_RP_GRAT;population;Anc tot Emméngt Rés princ occ gratuit (années) (princ);CHAR;2016
-P16_ANEM_RP_LOC;population;Anc tot Emméngt Rés princ occ par Locataires (années) (princ);CHAR;2016
-P16_ANEM_RP_LOCHLMV;population;Anc tot Emméngt Rés princ HLM louées vides (années) (princ);CHAR;2016
-P16_ANEM_RP_PROP;population;Anc tot Emméngt Rés princ occ par Propriétaires (années) (princ);CHAR;2016
+P16_ANEM_RP;population;Anc tot Emméngt Rés princ (années) (princ);NUM;2016
+P16_ANEM_RP_GRAT;population;Anc tot Emméngt Rés princ occ gratuit (années) (princ);NUM;2016
+P16_ANEM_RP_LOC;population;Anc tot Emméngt Rés princ occ par Locataires (années) (princ);NUM;2016
+P16_ANEM_RP_LOCHLMV;population;Anc tot Emméngt Rés princ HLM louées vides (années) (princ);NUM;2016
+P16_ANEM_RP_PROP;population;Anc tot Emméngt Rés princ occ par Propriétaires (années) (princ);NUM;2016
 P16_APPART;population;Appartements (princ);NUM;2016
 P16_CHOM1564;population;Chômeurs 15-64 ans (princ);NUM;2016
 P16_EMPLT;population;Emplois au LT (princ);NUM;2016
@@ -1394,12 +1394,12 @@ P16_NSCOL15P_BAC;population;Pop 15 ans ou plus non scol. BAC (princ);NUM;2016
 P16_NSCOL15P_CAPBEP;population;Pop 15 ans ou plus non scol. CAP-BEP (princ);NUM;2016
 P16_NSCOL15P_DIPLMIN;population;Pop 15 ans ou plus non scol. Sans diplôme ou BEPC, brevet des collèges, DNB (princ);NUM;2016
 P16_NSCOL15P_SUP;population;Pop 15 ans ou plus non scol. Enseignement sup (princ);NUM;2016
-P16_PMEN;population;Pop ménages (princ);CHAR;2016
-P16_PMEN_ANEM0002;population;Pop mén emménagés moins 2 ans (princ);CHAR;2016
-P16_PMEN_ANEM0204;population;Pop mén emménagés entre 2-4 ans (princ);CHAR;2016
-P16_PMEN_ANEM0509;population;Pop mén emménagés entre 5-9 ans (princ);CHAR;2016
-P16_PMEN_ANEM10P;population;Pop mén emménagés depuis 10 ans ou plus (princ);CHAR;2016
-P16_POP;population;Population (princ);CHAR;2016
+P16_PMEN;population;Pop ménages (princ);NUM;2016
+P16_PMEN_ANEM0002;population;Pop mén emménagés moins 2 ans (princ);NUM;2016
+P16_PMEN_ANEM0204;population;Pop mén emménagés entre 2-4 ans (princ);NUM;2016
+P16_PMEN_ANEM0509;population;Pop mén emménagés entre 5-9 ans (princ);NUM;2016
+P16_PMEN_ANEM10P;population;Pop mén emménagés depuis 10 ans ou plus (princ);NUM;2016
+P16_POP;population;Population (princ);NUM;2016
 P16_POP0014;population;Pop 0-14 ans (princ);NUM;2016
 P16_POP0114_IRAN2;population;Pop 1-14 ans habitant 1 an avt autre logt même commune (princ);NUM;2016
 P16_POP0114_IRAN2P;population;Pop 1-14 ans habitant 1 an avt autre logt (princ);NUM;2016
@@ -1563,11 +1563,11 @@ P22_ACT_SUP2;population;Actifs Enseignement sup de niveau bac + 2 (princ);NUM;20
 P22_ACT_SUP34;population;Actifs Enseignement sup de niveau bac + 3 ou 4 (princ);NUM;2022
 P22_ACT_SUP5;population;Actifs Enseignement sup de niveau bac + 5 ou plus (princ);NUM;2022
 P22_AINACT1564;population;Autres inactifs 15-64 ans (princ);NUM;2022
-P22_ANEM_RP;population;Anc tot Emméngt Rés princ (années) (princ);CHAR;2022
-P22_ANEM_RP_GRAT;population;Anc tot Emméngt Rés princ occ gratuit (années) (princ);CHAR;2022
-P22_ANEM_RP_LOC;population;Anc tot Emméngt Rés princ occ par Locataires (années) (princ);CHAR;2022
-P22_ANEM_RP_LOCHLMV;population;Anc tot Emméngt Rés princ HLM louées vides (années) (princ);CHAR;2022
-P22_ANEM_RP_PROP;population;Anc tot Emméngt Rés princ occ par Propriétaires (années) (princ);CHAR;2022
+P22_ANEM_RP;population;Anc tot Emméngt Rés princ (années) (princ);NUM;2022
+P22_ANEM_RP_GRAT;population;Anc tot Emméngt Rés princ occ gratuit (années) (princ);NUM;2022
+P22_ANEM_RP_LOC;population;Anc tot Emméngt Rés princ occ par Locataires (années) (princ);NUM;2022
+P22_ANEM_RP_LOCHLMV;population;Anc tot Emméngt Rés princ HLM louées vides (années) (princ);NUM;2022
+P22_ANEM_RP_PROP;population;Anc tot Emméngt Rés princ occ par Propriétaires (années) (princ);NUM;2022
 P22_APPART;population;Appartements (princ);NUM;2022
 P22_CHOM1524;population;Chômeurs de 15-24 ans (princ);NUM;2022
 P22_CHOM1564;population;Chômeurs 15-64 ans (princ);NUM;2022
@@ -1758,12 +1758,12 @@ P22_NSCOL15P_DIPLMIN;population;Pop 15 ans ou plus non scol. Sans diplôme ou CE
 P22_NSCOL15P_SUP2;population;Pop 15 ans ou plus non scol. Enseignement sup de niveau bac + 2 (princ);NUM;2022
 P22_NSCOL15P_SUP34;population;Pop 15 ans ou plus non scol. Enseignement sup de niveau bac + 3 ou 4 (princ);NUM;2022
 P22_NSCOL15P_SUP5;population;Pop 15 ans ou plus non scol. Enseignement sup de niveau bac + 5 ou plus (princ);NUM;2022
-P22_PMEN;population;Pop ménages (princ);CHAR;2022
-P22_PMEN_ANEM0002;population;Pop mén emménagés moins 2 ans (princ);CHAR;2022
-P22_PMEN_ANEM0204;population;Pop mén emménagés entre 2-4 ans (princ);CHAR;2022
-P22_PMEN_ANEM0509;population;Pop mén emménagés entre 5-9 ans (princ);CHAR;2022
-P22_PMEN_ANEM10P;population;Pop mén emménagés depuis 10 ans ou plus (princ);CHAR;2022
-P22_POP;population;Population (princ);CHAR;2022
+P22_PMEN;population;Pop ménages (princ);NUM;2022
+P22_PMEN_ANEM0002;population;Pop mén emménagés moins 2 ans (princ);NUM;2022
+P22_PMEN_ANEM0204;population;Pop mén emménagés entre 2-4 ans (princ);NUM;2022
+P22_PMEN_ANEM0509;population;Pop mén emménagés entre 5-9 ans (princ);NUM;2022
+P22_PMEN_ANEM10P;population;Pop mén emménagés depuis 10 ans ou plus (princ);NUM;2022
+P22_POP;population;Population (princ);NUM;2022
 P22_POP0014;population;Pop 0-14 ans (princ);NUM;2022
 P22_POP0114_IRAN2;population;Pop 1-14 ans habitant 1 an avt autre logt même commune (princ);NUM;2022
 P22_POP0114_IRAN2P;population;Pop 1-14 ans habitant 1 an avt autre logt (princ);NUM;2022
@@ -1899,61 +1899,61 @@ P22_SCOL1517;population;Pop scolarisée 15-17 ans (princ);NUM;2022
 P22_SCOL1824;population;Pop scolarisée 18-24 ans (princ);NUM;2022
 P22_SCOL2529;population;Pop scolarisée 25-29 ans (princ);NUM;2022
 P22_SCOL30P;population;Pop scolarisée 30 ans ou plus (princ);NUM;2022
-PACT21;fiscal;Part des revenus d'activité (%);%;2021
-PBEN21;fiscal;dont part des revenus des activités non salariées (%);%;2021
-PCHO21;fiscal;dont part des indemnités de chômage (%);%;2021
-PIMP21;fiscal;Part des ménages fiscaux imposés (%);%;2021
-PIMPOT21;fiscal;Part des impôts (%);%;2021
-PPAT21;fiscal;Part des revenus du patrimoine et autres revenus (%);%;2021
-PPEN21;fiscal;Part des pensions, retraites et rentes (%);%;2021
-PPFAM21;fiscal;dont part des prestations familiales (%);%;2021
-PPLOGT21;fiscal;dont part des prestations logement (%);%;2021
-PPMINI21;fiscal;dont part des minima sociaux (%);%;2021
-PPSOC21;fiscal;Part de l'ensemble des prestations sociales (%);%;2021
-PTSA21;fiscal;dont part des salaires et traitements (%);%;2021
-RD21;fiscal;Rapport interdécile 9e décile/1er décile;CHAR;2021
-RT25;tourism_accommodations;Résidences de tourisme;CHAR;2025
-RTLIT25;tourism_accommodations;Lits dans Résidences de tourisme;CHAR;2025
-RTUH25;tourism_accommodations;Unités d'hébergements dans Résidences de tourisme;CHAR;2025
-SNEMM_23;fiscal;Salaire net EQTP mensuel moyen (€);CHAR;2023
-SNEMM_AGE_Y25T39_23;fiscal;Salaire net EQTP mensuel moyen  25-39 ans (€);CHAR;2023
-SNEMM_AGE_Y40T49_23;fiscal;Salaire net EQTP mensuel moyen  40-49 ans (€);CHAR;2023
-SNEMM_AGE_Y50T54_23;fiscal;Salaire net EQTP mensuel moyen  50-54 ans (€);CHAR;2023
-SNEMM_AGE_Y_GE55_23;fiscal;Salaire net EQTP mensuel moyen  55+ ans (€);CHAR;2023
-SNEMM_AGE_Y_LT25_23;fiscal;Salaire net EQTP mensuel moyen  <25 ans (€);CHAR;2023
-SNEMM_PCS_ESE_1T3_23;fiscal;Salaire net EQTP mensuel moyen  cadres sup. (€);CHAR;2023
-SNEMM_PCS_ESE_4_23;fiscal;Salaire net EQTP mensuel moyen  prof inter. (€);CHAR;2023
-SNEMM_PCS_ESE_5_23;fiscal;Salaire net EQTP mensuel moyen  employés (€);CHAR;2023
-SNEMM_PCS_ESE_6_23;fiscal;Salaire net EQTP mensuel moyen  ouvriers (€);CHAR;2023
-SNEMM_SEX_F_23;fiscal;Salaire net EQTP mensuel moyen  F (€);CHAR;2023
-SNEMM_SEX_F_AGE_Y25T39_23;fiscal;Salaire net EQTP mensuel moyen  F 25-39 ans (€);CHAR;2023
-SNEMM_SEX_F_AGE_Y40T49_23;fiscal;Salaire net EQTP mensuel moyen  F 40-49 ans (€);CHAR;2023
-SNEMM_SEX_F_AGE_Y50T54_23;fiscal;Salaire net EQTP mensuel moyen  F 50-54 ans (€);CHAR;2023
-SNEMM_SEX_F_AGE_Y_GE55_23;fiscal;Salaire net EQTP mensuel moyen  F 55+ ans (€);CHAR;2023
-SNEMM_SEX_F_AGE_Y_LT25_23;fiscal;Salaire net EQTP mensuel moyen  F <25 ans (€);CHAR;2023
-SNEMM_SEX_F_PCS_ESE_1T3_23;fiscal;Salaire net EQTP mensuel moyen  F cadres sup. (€);CHAR;2023
-SNEMM_SEX_F_PCS_ESE_4_23;fiscal;Salaire net EQTP mensuel moyen  F prof inter. (€);CHAR;2023
-SNEMM_SEX_F_PCS_ESE_5_23;fiscal;Salaire net EQTP mensuel moyen  F employés (€);CHAR;2023
-SNEMM_SEX_F_PCS_ESE_6_23;fiscal;Salaire net EQTP mensuel moyen  F ouvriers (€);CHAR;2023
-SNEMM_SEX_M_23;fiscal;Salaire net EQTP mensuel moyen  H (€);CHAR;2023
-SNEMM_SEX_M_AGE_Y25T39_23;fiscal;Salaire net EQTP mensuel moyen  H 25-39 ans (€);CHAR;2023
-SNEMM_SEX_M_AGE_Y40T49_23;fiscal;Salaire net EQTP mensuel moyen  H 40-49 ans (€);CHAR;2023
-SNEMM_SEX_M_AGE_Y50T54_23;fiscal;Salaire net EQTP mensuel moyen  H 50-54 ans (€);CHAR;2023
-SNEMM_SEX_M_AGE_Y_GE55_23;fiscal;Salaire net EQTP mensuel moyen  H 55+ ans (€);CHAR;2023
-SNEMM_SEX_M_AGE_Y_LT25_23;fiscal;Salaire net EQTP mensuel moyen  H <25 ans (€);CHAR;2023
-SNEMM_SEX_M_PCS_ESE_1T3_23;fiscal;Salaire net EQTP mensuel moyen  H cadres sup. (€);CHAR;2023
-SNEMM_SEX_M_PCS_ESE_4_23;fiscal;Salaire net EQTP mensuel moyen  H prof inter. (€);CHAR;2023
-SNEMM_SEX_M_PCS_ESE_5_23;fiscal;Salaire net EQTP mensuel moyen  H employés (€);CHAR;2023
-SNEMM_SEX_M_PCS_ESE_6_23;fiscal;Salaire net EQTP mensuel moyen  H ouvriers (€);CHAR;2023
-TP6021;fiscal;Taux de pauvreté-Ensemble (%);%;2021
-TP60AGE121;fiscal;Taux de pauvreté-moins de 30 ans (%);%;2021
-TP60AGE221;fiscal;Taux de pauvreté-30 à 39 ans  (%);%;2021
-TP60AGE321;fiscal;Taux de pauvreté-40 à 49 ans (%);%;2021
-TP60AGE421;fiscal;Taux de pauvreté-50 à 59 ans (%);%;2021
-TP60AGE521;fiscal;Taux de pauvreté-60 à 74 ans (%);%;2021
-TP60AGE621;fiscal;Taux de pauvreté-75 ans ou plus (%);%;2021
-TP60TOL121;fiscal;Taux de pauvreté-propriétaires (%);%;2021
-TP60TOL221;fiscal;Taux de pauvreté-locataires (%);%;2021
+PACT21;fiscal;Part des revenus d'activité (%);NUM;2021
+PBEN21;fiscal;dont part des revenus des activités non salariées (%);NUM;2021
+PCHO21;fiscal;dont part des indemnités de chômage (%);NUM;2021
+PIMP21;fiscal;Part des ménages fiscaux imposés (%);NUM;2021
+PIMPOT21;fiscal;Part des impôts (%);NUM;2021
+PPAT21;fiscal;Part des revenus du patrimoine et autres revenus (%);NUM;2021
+PPEN21;fiscal;Part des pensions, retraites et rentes (%);NUM;2021
+PPFAM21;fiscal;dont part des prestations familiales (%);NUM;2021
+PPLOGT21;fiscal;dont part des prestations logement (%);NUM;2021
+PPMINI21;fiscal;dont part des minima sociaux (%);NUM;2021
+PPSOC21;fiscal;Part de l'ensemble des prestations sociales (%);NUM;2021
+PTSA21;fiscal;dont part des salaires et traitements (%);NUM;2021
+RD21;fiscal;Rapport interdécile 9e décile/1er décile;NUM;2021
+RT25;tourism_accommodations;Résidences de tourisme;NUM;2025
+RTLIT25;tourism_accommodations;Lits dans Résidences de tourisme;NUM;2025
+RTUH25;tourism_accommodations;Unités d'hébergements dans Résidences de tourisme;NUM;2025
+SNEMM_23;fiscal;Salaire net EQTP mensuel moyen (€);NUM;2023
+SNEMM_AGE_Y25T39_23;fiscal;Salaire net EQTP mensuel moyen  25-39 ans (€);NUM;2023
+SNEMM_AGE_Y40T49_23;fiscal;Salaire net EQTP mensuel moyen  40-49 ans (€);NUM;2023
+SNEMM_AGE_Y50T54_23;fiscal;Salaire net EQTP mensuel moyen  50-54 ans (€);NUM;2023
+SNEMM_AGE_Y_GE55_23;fiscal;Salaire net EQTP mensuel moyen  55+ ans (€);NUM;2023
+SNEMM_AGE_Y_LT25_23;fiscal;Salaire net EQTP mensuel moyen  <25 ans (€);NUM;2023
+SNEMM_PCS_ESE_1T3_23;fiscal;Salaire net EQTP mensuel moyen  cadres sup. (€);NUM;2023
+SNEMM_PCS_ESE_4_23;fiscal;Salaire net EQTP mensuel moyen  prof inter. (€);NUM;2023
+SNEMM_PCS_ESE_5_23;fiscal;Salaire net EQTP mensuel moyen  employés (€);NUM;2023
+SNEMM_PCS_ESE_6_23;fiscal;Salaire net EQTP mensuel moyen  ouvriers (€);NUM;2023
+SNEMM_SEX_F_23;fiscal;Salaire net EQTP mensuel moyen  F (€);NUM;2023
+SNEMM_SEX_F_AGE_Y25T39_23;fiscal;Salaire net EQTP mensuel moyen  F 25-39 ans (€);NUM;2023
+SNEMM_SEX_F_AGE_Y40T49_23;fiscal;Salaire net EQTP mensuel moyen  F 40-49 ans (€);NUM;2023
+SNEMM_SEX_F_AGE_Y50T54_23;fiscal;Salaire net EQTP mensuel moyen  F 50-54 ans (€);NUM;2023
+SNEMM_SEX_F_AGE_Y_GE55_23;fiscal;Salaire net EQTP mensuel moyen  F 55+ ans (€);NUM;2023
+SNEMM_SEX_F_AGE_Y_LT25_23;fiscal;Salaire net EQTP mensuel moyen  F <25 ans (€);NUM;2023
+SNEMM_SEX_F_PCS_ESE_1T3_23;fiscal;Salaire net EQTP mensuel moyen  F cadres sup. (€);NUM;2023
+SNEMM_SEX_F_PCS_ESE_4_23;fiscal;Salaire net EQTP mensuel moyen  F prof inter. (€);NUM;2023
+SNEMM_SEX_F_PCS_ESE_5_23;fiscal;Salaire net EQTP mensuel moyen  F employés (€);NUM;2023
+SNEMM_SEX_F_PCS_ESE_6_23;fiscal;Salaire net EQTP mensuel moyen  F ouvriers (€);NUM;2023
+SNEMM_SEX_M_23;fiscal;Salaire net EQTP mensuel moyen  H (€);NUM;2023
+SNEMM_SEX_M_AGE_Y25T39_23;fiscal;Salaire net EQTP mensuel moyen  H 25-39 ans (€);NUM;2023
+SNEMM_SEX_M_AGE_Y40T49_23;fiscal;Salaire net EQTP mensuel moyen  H 40-49 ans (€);NUM;2023
+SNEMM_SEX_M_AGE_Y50T54_23;fiscal;Salaire net EQTP mensuel moyen  H 50-54 ans (€);NUM;2023
+SNEMM_SEX_M_AGE_Y_GE55_23;fiscal;Salaire net EQTP mensuel moyen  H 55+ ans (€);NUM;2023
+SNEMM_SEX_M_AGE_Y_LT25_23;fiscal;Salaire net EQTP mensuel moyen  H <25 ans (€);NUM;2023
+SNEMM_SEX_M_PCS_ESE_1T3_23;fiscal;Salaire net EQTP mensuel moyen  H cadres sup. (€);NUM;2023
+SNEMM_SEX_M_PCS_ESE_4_23;fiscal;Salaire net EQTP mensuel moyen  H prof inter. (€);NUM;2023
+SNEMM_SEX_M_PCS_ESE_5_23;fiscal;Salaire net EQTP mensuel moyen  H employés (€);NUM;2023
+SNEMM_SEX_M_PCS_ESE_6_23;fiscal;Salaire net EQTP mensuel moyen  H ouvriers (€);NUM;2023
+TP6021;fiscal;Taux de pauvreté-Ensemble (%);NUM;2021
+TP60AGE121;fiscal;Taux de pauvreté-moins de 30 ans (%);NUM;2021
+TP60AGE221;fiscal;Taux de pauvreté-30 à 39 ans  (%);NUM;2021
+TP60AGE321;fiscal;Taux de pauvreté-40 à 49 ans (%);NUM;2021
+TP60AGE421;fiscal;Taux de pauvreté-50 à 59 ans (%);NUM;2021
+TP60AGE521;fiscal;Taux de pauvreté-60 à 74 ans (%);NUM;2021
+TP60AGE621;fiscal;Taux de pauvreté-75 ans ou plus (%);NUM;2021
+TP60TOL121;fiscal;Taux de pauvreté-propriétaires (%);NUM;2021
+TP60TOL221;fiscal;Taux de pauvreté-locataires (%);NUM;2021
 VV25;tourism_accommodations;Villages vacances;NUM;2025
 VVLIT25;tourism_accommodations;Lits dans Villages vacances;NUM;2025
 VVUH25;tourism_accommodations;Unités d'hébergements dans Villages vacances;NUM;2025
