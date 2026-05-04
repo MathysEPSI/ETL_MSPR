@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from flatten_dossier_complet import flatten_dossier_complet
+from .flatten_dossier_complet import flatten_dossier_complet
 
 
 def main() -> None:
