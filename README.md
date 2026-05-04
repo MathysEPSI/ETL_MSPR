@@ -52,25 +52,6 @@ Grain des facts :
 python -m src.starschema.build_star_schema --input processed_data/elections_flat.csv --output-dir processed_data/star_schema --export csv
 ```
 
-### Pipeline INSEE (communes presentes dans elections_flat)
-```powershell
-python -m src.insee_processing.run_pipeline --format csv --output-dir processed_data/insee
-```
-
-Le pipeline conserve toutes les colonnes INSEE; `--threshold` sert uniquement au reporting de qualite (`column_profile_report.csv`).
-
-Sorties principales (`processed_data/insee`) :
-- `tables/insee_2020_commune_selected_wide.{csv|parquet}`
-- `tables/insee_2025_commune_selected_wide.{csv|parquet}`
-- `tables/fact_insee_commune_snapshot.{csv|parquet}`
-- `tables/fact_insee_commune_snapshot_common.{csv|parquet}`
-- `tables/dim_insee_indicateur.csv`
-- `tables/dim_insee_indicateur_common.csv`
-- `tables/bridge_election_insee_snapshot.csv`
-- `reports/coverage_report.csv`
-- `reports/column_profile_report.csv`
-- `reports/run_manifest.json`
-
 ### Usage en DataFrames pandas (insertion BDD directe)
 ```python
 import pandas as pd
@@ -81,3 +62,10 @@ flat = pd.read_csv("processed_data/elections_flat.csv", sep=";", encoding="latin
 tables = build_star_schema(flat)
 tables_df = export_tables_dataframes(tables)
 ```
+
+## Pipeline INSEE
+```powershell
+python -m src.insee_processing.run_flatten_dossier_complet
+```
+
+Le script filtre `CODGEO` a partir de `processed_data/star_schema/dim_geographie.csv` et genere un CSV par `target_table`.
