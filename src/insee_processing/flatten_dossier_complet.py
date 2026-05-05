@@ -112,18 +112,16 @@ def _sanitize_table_name(table_name: str) -> str:
     return table_name.replace("/", "_").replace("\\", "_")
 
 
-def flatten_dossier_complet(
+def flatten_dossier_complet_tables(
     raw_path: Path,
     mapping_path: Path,
-    output_dir: Path,
     meta_path: Optional[Path] = None,
     dim_geo_path: Optional[Path] = None,
     sep: str = ";",
     encoding: str = "utf-8",
     limit_rows: Optional[int] = None,
-) -> None:
-    output_dir.mkdir(parents=True, exist_ok=True)
-
+    sanitize_table_names: bool = True,
+) -> Dict[str, pd.DataFrame]:
     mapping_df = _read_mapping(mapping_path, sep=sep, encoding=encoding)
     raw_columns = set(_read_raw_header(raw_path, sep=sep, encoding=encoding))
 
@@ -149,6 +147,7 @@ def flatten_dossier_complet(
         if removed_count:
             print(f"Filtered {removed_count} rows with CODGEO not in dim_geographie.")
 
+    tables: Dict[str, pd.DataFrame] = {}
     for table_name, table_mapping in mapping_df.groupby("target_table"):
         canonical_order = list(dict.fromkeys(table_mapping["canonical_metric"].tolist()))
         table_frames: List[pd.DataFrame] = []
@@ -172,8 +171,37 @@ def flatten_dossier_complet(
         table_df = table_df.reindex(columns=["CODGEO", "annee", *canonical_order])
         table_df = table_df.sort_values(by=["CODGEO", "annee"], kind="mergesort")
 
-        safe_table_name = _sanitize_table_name(table_name)
-        output_path = output_dir / f"{safe_table_name}.csv"
+        safe_table_name = _sanitize_table_name(table_name) if sanitize_table_names else table_name
+        tables[safe_table_name] = table_df
+
+    return tables
+
+
+def flatten_dossier_complet(
+    raw_path: Path,
+    mapping_path: Path,
+    output_dir: Path,
+    meta_path: Optional[Path] = None,
+    dim_geo_path: Optional[Path] = None,
+    sep: str = ";",
+    encoding: str = "utf-8",
+    limit_rows: Optional[int] = None,
+) -> None:
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    tables = flatten_dossier_complet_tables(
+        raw_path=raw_path,
+        mapping_path=mapping_path,
+        meta_path=meta_path,
+        dim_geo_path=dim_geo_path,
+        sep=sep,
+        encoding=encoding,
+        limit_rows=limit_rows,
+        sanitize_table_names=True,
+    )
+
+    for table_name, table_df in tables.items():
+        output_path = output_dir / f"{table_name}.csv"
         table_df.to_csv(output_path, sep=sep, encoding=encoding, index=False)
         print(f"Wrote {output_path}")
 

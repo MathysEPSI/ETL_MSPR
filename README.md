@@ -69,3 +69,27 @@ python -m src.insee_processing.run_flatten_dossier_complet
 ```
 
 Le script filtre `CODGEO` a partir de `processed_data/star_schema/dim_geographie.csv` et genere un CSV par `target_table`.
+
+### Export CSV minimal (INSEE)
+```powershell
+python -m src.insee_processing.run_flatten_dossier_complet \
+  --raw data/dossier_complet_2025/dossier_complet_2025.csv \
+  --mapping src/insee_processing/mapping_dossier_complet.csv \
+  --meta data/dossier_complet_2025/meta_dossier_complet.csv \
+  --dim-geo processed_data/star_schema/dim_geographie.csv \
+  --output-dir processed_data/insee/dossier_complet_2025_flattened
+```
+
+### Export DataFrame dict minimal (INSEE)
+```python
+from pathlib import Path
+
+from src.insee_processing import flatten_dossier_complet_tables
+
+tables = flatten_dossier_complet_tables(
+    raw_path=Path("data/dossier_complet_2025/dossier_complet_2025.csv"),
+    mapping_path=Path("src/insee_processing/mapping_dossier_complet.csv"),
+    meta_path=Path("data/dossier_complet_2025/meta_dossier_complet.csv"),
+    dim_geo_path=Path("processed_data/star_schema/dim_geographie.csv"),
+)
+```
