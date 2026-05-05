@@ -48,6 +48,7 @@ Grain des facts :
 - `fact_resultats_liste` : 1 ligne = 1 candidat/liste dans 1 commune, pour 1 tour et 1 annee
 
 ### Export CSV des tables du modele en etoile
+Nécessite de run le pipeline de preprocessing pour générer `processed_data/elections_flat.csv` avant.
 ```powershell
 python -m src.starschema.build_star_schema --input processed_data/elections_flat.csv --output-dir processed_data/star_schema --export csv
 ```
@@ -64,6 +65,7 @@ tables_df = export_tables_dataframes(tables)
 ```
 
 ## Pipeline INSEE
+Nécessite de run le pipeline schéma étoile pour générer `processed_data/star_schema/dim_geographie.csv` avant.
 ```powershell
 python -m src.insee_processing.run_flatten_dossier_complet
 ```
