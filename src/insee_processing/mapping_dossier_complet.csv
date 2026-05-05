@@ -1,31 +1,31 @@
 source_code;target_table;canonical_metric;data_type;available_years
-AJCS25;tourism_accommodations;Auberges de jeunesse - Centres sportifs;NUM;2025
-AJCSLIT25;tourism_accommodations;Lits dans Auberges de jeunesse - Centre sportif;NUM;2025
-AJCSUH25;tourism_accommodations;Unités d'hébergements dans Auberges de jeunesse - Centres sportifs;NUM;2025
-BPE_2024_A501;equipements_services;Coiffure;NUM;2001
-BPE_2024_B104;equipements_services;Hypermarché et grand magasin;NUM;2004
-BPE_2024_B105;equipements_services;Supermarché et magasin multi-commerce;NUM;2005
-BPE_2024_B201;equipements_services;Supérette;NUM;2001
-BPE_2024_B202;equipements_services;Épicerie;NUM;2002
-BPE_2024_B207;equipements_services;Boulangerie-pâtisserie;NUM;2007
-BPE_2024_B316;equipements_services;Station-service;NUM;2016
+AJCS26;tourism_accommodations;Auberges de jeunesse - Centres sportifs;NUM;2025
+AJCSLIT26;tourism_accommodations;Lits dans Auberges de jeunesse - Centre sportif;NUM;2025
+AJCSUH26;tourism_accommodations;Unités d'hébergements dans Auberges de jeunesse - Centres sportifs;NUM;2025
+BPE_2024_A501;equipements_services;Coiffure;NUM;2024
+BPE_2024_B104;equipements_services;Hypermarché et grand magasin;NUM;2024
+BPE_2024_B105;equipements_services;Supermarché et magasin multi-commerce;NUM;2024
+BPE_2024_B201;equipements_services;Supérette;NUM;2024
+BPE_2024_B202;equipements_services;Épicerie;NUM;2024
+BPE_2024_B207;equipements_services;Boulangerie-pâtisserie;NUM;2024
+BPE_2024_B316;equipements_services;Station-service;NUM;2024
 BPE_2024_B326;equipements_services;Station de recharge de véhicules électriques;NUM;2024
-BPE_2024_C107;equipements_services;École maternelle;NUM;2007
-BPE_2024_C108;equipements_services;École primaire;NUM;2008
-BPE_2024_C109;equipements_services;École élémentaire;NUM;2009
-BPE_2024_C201;equipements_services;Collège;NUM;2001
-BPE_2024_C301;equipements_services;Lycée d’enseignement général et/ou technologique;NUM;2001
-BPE_2024_C302;equipements_services;Lycée d’enseignement professionnel;NUM;2002
-BPE_2024_C303;equipements_services;Lycée d’enseignement agricole;NUM;2003
-BPE_2024_C304;equipements_services;Enseignement général et technologique au sein d’un lycée professionnel;NUM;2004
-BPE_2024_C305;equipements_services;Enseignement professionnel au sein d’un lycée d’enseignement général et/ou technologique;NUM;2005
+BPE_2024_C107;equipements_services;École maternelle;NUM;2024
+BPE_2024_C108;equipements_services;École primaire;NUM;2024
+BPE_2024_C109;equipements_services;École élémentaire;NUM;2024
+BPE_2024_C201;equipements_services;Collège;NUM;2024
+BPE_2024_C301;equipements_services;Lycée d’enseignement général et/ou technologique;NUM;2024
+BPE_2024_C302;equipements_services;Lycée d’enseignement professionnel;NUM;2024
+BPE_2024_C303;equipements_services;Lycée d’enseignement agricole;NUM;2024
+BPE_2024_C304;equipements_services;Enseignement général et technologique au sein d’un lycée professionnel;NUM;2024
+BPE_2024_C305;equipements_services;Enseignement professionnel au sein d’un lycée d’enseignement général et/ou technologique;NUM;2024
 BPE_2024_D250;equipements_services;Psychologue;NUM;2024
 BPE_2024_D265;equipements_services;Médecin généraliste;NUM;2024
-BPE_2024_D277;equipements_services;Chirurgien dentiste;NUM;1977
-BPE_2024_D279;equipements_services;Masseur kinésithérapeute;NUM;1979
-BPE_2024_D281;equipements_services;Infirmier;NUM;1981
-BPE_2024_D307;equipements_services;Pharmacie;NUM;2007
-BPE_2024_F307;equipements_services;Bibliothèque;NUM;2007
+BPE_2024_D277;equipements_services;Chirurgien dentiste;NUM;2024
+BPE_2024_D279;equipements_services;Masseur kinésithérapeute;NUM;2024
+BPE_2024_D281;equipements_services;Infirmier;NUM;2024
+BPE_2024_D307;equipements_services;Pharmacie;NUM;2024
+BPE_2024_F307;equipements_services;Bibliothèque;NUM;2024
 C11_ACT1564;composition;Actifs 15-64 ans (compl);NUM;2011
 C11_ACT1564_CS1;composition;Actifs 15-64 ans Agriculteurs exploitants (compl);NUM;2011
 C11_ACT1564_CS2;composition;Actifs 15-64 ans Artisans, Comm., Chefs entr. (compl);NUM;2011
@@ -472,34 +472,34 @@ C22_RP_SOUSOCC_MOD;composition;Rés princ sous-occupation modérée;NUM;2022
 C22_RP_SOUSOCC_TACC;composition;Rés princ sous-occupation très accentuée;NUM;2022
 C22_RP_SUROCC_ACC;composition;Rés princ suroccupation accentuée;NUM;2022
 C22_RP_SUROCC_MOD;composition;Rés princ suroccupation modérée;NUM;2022
-CPG025;tourism_accommodations;Campings non classés;NUM;2025
-CPG125;tourism_accommodations;Campings classés 1 étoile;NUM;2025
-CPG225;tourism_accommodations;Campings classés 2 étoiles;NUM;2025
-CPG25;tourism_accommodations;Campings;NUM;2025
-CPG325;tourism_accommodations;Campings classés 3 étoiles;NUM;2025
-CPG425;tourism_accommodations;Campings classés 4 étoiles;NUM;2025
-CPG525;tourism_accommodations;Campings classés 5 étoiles;NUM;2025
-CPGE025;tourism_accommodations;Emplacements camping non classés;NUM;2025
-CPGE125;tourism_accommodations;Emplacements camping classés 1 étoile;NUM;2025
-CPGE225;tourism_accommodations;Emplacements camping classés 2 étoiles;NUM;2025
-CPGE25;tourism_accommodations;Emplacements de camping;NUM;2025
-CPGE325;tourism_accommodations;Emplacements camping classés 3 étoiles;NUM;2025
-CPGE425;tourism_accommodations;Emplacements camping classés 4 étoiles;NUM;2025
-CPGE525;tourism_accommodations;Emplacements camping classés 5 étoiles;NUM;2025
-CPGEL025;tourism_accommodations;Emplacements loués à l'année campings non classés;NUM;2025
-CPGEL125;tourism_accommodations;Emplacements loués à l'année campings classés 1 étoile;NUM;2025
-CPGEL225;tourism_accommodations;Emplacements loués à l'année campings classés 2 étoiles;NUM;2025
-CPGEL25;tourism_accommodations;Emplacements loués à l'année;NUM;2025
-CPGEL325;tourism_accommodations;Emplacements loués à l'année campings classés 3 étoiles;NUM;2025
-CPGEL425;tourism_accommodations;Emplacements loués à l'année campings classés 4 étoiles;NUM;2025
-CPGEL525;tourism_accommodations;Emplacements loués à l'année campings classés 5 étoiles;NUM;2025
-CPGEO025;tourism_accommodations;Emplacements offerts clientèle de passage campings non classés;NUM;2025
-CPGEO125;tourism_accommodations;Emplacements offerts clientèle de passage campings classés 1 étoile;NUM;2025
-CPGEO225;tourism_accommodations;Emplacements offerts clientèle de passage campings classés 2 étoiles;NUM;2025
-CPGEO25;tourism_accommodations;Emplacements offerts clientèle de passage dans campings;NUM;2025
-CPGEO325;tourism_accommodations;Emplacements offerts clientèle de passage campings classés 3 étoiles;NUM;2025
-CPGEO425;tourism_accommodations;Emplacements offerts clientèle de passage campings classés 4 étoiles;NUM;2025
-CPGEO525;tourism_accommodations;Emplacements offerts clientèle de passage campings classés 5 étoiles;NUM;2025
+CPG026;tourism_accommodations;Campings non classés;NUM;2025
+CPG126;tourism_accommodations;Campings classés 1 étoile;NUM;2025
+CPG226;tourism_accommodations;Campings classés 2 étoiles;NUM;2025
+CPG26;tourism_accommodations;Campings;NUM;2025
+CPG326;tourism_accommodations;Campings classés 3 étoiles;NUM;2025
+CPG426;tourism_accommodations;Campings classés 4 étoiles;NUM;2025
+CPG526;tourism_accommodations;Campings classés 5 étoiles;NUM;2025
+CPGE026;tourism_accommodations;Emplacements camping non classés;NUM;2025
+CPGE126;tourism_accommodations;Emplacements camping classés 1 étoile;NUM;2025
+CPGE226;tourism_accommodations;Emplacements camping classés 2 étoiles;NUM;2025
+CPGE26;tourism_accommodations;Emplacements de camping;NUM;2025
+CPGE326;tourism_accommodations;Emplacements camping classés 3 étoiles;NUM;2025
+CPGE426;tourism_accommodations;Emplacements camping classés 4 étoiles;NUM;2025
+CPGE526;tourism_accommodations;Emplacements camping classés 5 étoiles;NUM;2025
+CPGEL026;tourism_accommodations;Emplacements loués à l'année campings non classés;NUM;2025
+CPGEL126;tourism_accommodations;Emplacements loués à l'année campings classés 1 étoile;NUM;2025
+CPGEL226;tourism_accommodations;Emplacements loués à l'année campings classés 2 étoiles;NUM;2025
+CPGEL26;tourism_accommodations;Emplacements loués à l'année;NUM;2025
+CPGEL326;tourism_accommodations;Emplacements loués à l'année campings classés 3 étoiles;NUM;2025
+CPGEL426;tourism_accommodations;Emplacements loués à l'année campings classés 4 étoiles;NUM;2025
+CPGEL526;tourism_accommodations;Emplacements loués à l'année campings classés 5 étoiles;NUM;2025
+CPGEO026;tourism_accommodations;Emplacements offerts clientèle de passage campings non classés;NUM;2025
+CPGEO126;tourism_accommodations;Emplacements offerts clientèle de passage campings classés 1 étoile;NUM;2025
+CPGEO226;tourism_accommodations;Emplacements offerts clientèle de passage campings classés 2 étoiles;NUM;2025
+CPGEO26;tourism_accommodations;Emplacements offerts clientèle de passage dans campings;NUM;2025
+CPGEO326;tourism_accommodations;Emplacements offerts clientèle de passage campings classés 3 étoiles;NUM;2025
+CPGEO426;tourism_accommodations;Emplacements offerts clientèle de passage campings classés 4 étoiles;NUM;2025
+CPGEO526;tourism_accommodations;Emplacements offerts clientèle de passage campings classés 5 étoiles;NUM;2025
 D121;fiscal;1er décile du niveau de vie (€);NUM;2021
 D68_LOG;historical_demography;Logements (dnbt);NUM;1968
 D68_LOGVAC;historical_demography;Logements vacants (dnbt);NUM;1968
@@ -559,38 +559,38 @@ ENCILZ24;creation_entreprises;Créat. d'entr. ind. d’activités immobilières;
 ENCIMN24;creation_entreprises;Créat. d'entr. ind. d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2024
 ENCIOQ24;creation_entreprises;Créat. d'entr. ind. du secteur adm publ, enseign, santé et action sociale;NUM;2024
 ENCIRU24;creation_entreprises;Créat. d'entr. ind. des autres activités de services;NUM;2024
-ENCITOT12;creation_entreprises;Créations d'entr. ind.;NUM;2012
-ENCITOT13;creation_entreprises;Créations d'entr. ind.;NUM;2013
-ENCITOT14;creation_entreprises;Créations d'entr. ind.;NUM;2014
-ENCITOT15;creation_entreprises;Créations d'entr. ind.;NUM;2015
-ENCITOT16;creation_entreprises;Créations d'entr. ind.;NUM;2016
-ENCITOT17;creation_entreprises;Créations d'entr. ind.;NUM;2017
-ENCITOT18;creation_entreprises;Créations d'entr. ind.;NUM;2018
-ENCITOT19;creation_entreprises;Créations d'entr. ind.;NUM;2019
-ENCITOT20;creation_entreprises;Créations d'entr. ind.;NUM;2020
-ENCITOT21;creation_entreprises;Créations d'entr. ind.;NUM;2021
-ENCITOT22;creation_entreprises;Créations d'entr. ind.;NUM;2022
-ENCITOT23;creation_entreprises;Créations d'entr. ind.;NUM;2023
-ENCITOT24;creation_entreprises;Créations d'entr. ind.;NUM;2024
+ENCITOT12;creation_histo;Créations d'entr. ind.;NUM;2012
+ENCITOT13;creation_histo;Créations d'entr. ind.;NUM;2013
+ENCITOT14;creation_histo;Créations d'entr. ind.;NUM;2014
+ENCITOT15;creation_histo;Créations d'entr. ind.;NUM;2015
+ENCITOT16;creation_histo;Créations d'entr. ind.;NUM;2016
+ENCITOT17;creation_histo;Créations d'entr. ind.;NUM;2017
+ENCITOT18;creation_histo;Créations d'entr. ind.;NUM;2018
+ENCITOT19;creation_histo;Créations d'entr. ind.;NUM;2019
+ENCITOT20;creation_histo;Créations d'entr. ind.;NUM;2020
+ENCITOT21;creation_histo;Créations d'entr. ind.;NUM;2021
+ENCITOT22;creation_histo;Créations d'entr. ind.;NUM;2022
+ENCITOT23;creation_histo;Créations d'entr. ind.;NUM;2023
+ENCITOT24;creation_histo;Créations d'entr. ind.;NUM;2024
 ENCJZ24;creation_entreprises;Créations d'entr. d’information et communication;NUM;2024
 ENCKZ24;creation_entreprises;Créations d'entr. d’activités financières et d'assurance;NUM;2024
 ENCLZ24;creation_entreprises;Créations d'entr. d’activités immobilières;NUM;2024
 ENCMN24;creation_entreprises;Créations d'entr. d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2024
 ENCOQ24;creation_entreprises;Créations d'entr. du secteur adm publ, enseign, santé et action sociale;NUM;2024
 ENCRU24;creation_entreprises;Créations d'entr. des autres activités de services;NUM;2024
-ENCTOT12;creation_entreprises;Créations d'entr.;NUM;2012
-ENCTOT13;creation_entreprises;Créations d'entr.;NUM;2013
-ENCTOT14;creation_entreprises;Créations d'entr.;NUM;2014
-ENCTOT15;creation_entreprises;Créations d'entr.;NUM;2015
-ENCTOT16;creation_entreprises;Créations d'entr.;NUM;2016
-ENCTOT17;creation_entreprises;Créations d'entr.;NUM;2017
-ENCTOT18;creation_entreprises;Créations d'entr.;NUM;2018
-ENCTOT19;creation_entreprises;Créations d'entr.;NUM;2019
-ENCTOT20;creation_entreprises;Créations d'entr.;NUM;2020
-ENCTOT21;creation_entreprises;Créations d'entr.;NUM;2021
-ENCTOT22;creation_entreprises;Créations d'entr.;NUM;2022
-ENCTOT23;creation_entreprises;Créations d'entr.;NUM;2023
-ENCTOT24;creation_entreprises;Créations d'entr.;NUM;2024
+ENCTOT12;creation_histo;Créations d'entr.;NUM;2012
+ENCTOT13;creation_histo;Créations d'entr.;NUM;2013
+ENCTOT14;creation_histo;Créations d'entr.;NUM;2014
+ENCTOT15;creation_histo;Créations d'entr.;NUM;2015
+ENCTOT16;creation_histo;Créations d'entr.;NUM;2016
+ENCTOT17;creation_histo;Créations d'entr.;NUM;2017
+ENCTOT18;creation_histo;Créations d'entr.;NUM;2018
+ENCTOT19;creation_histo;Créations d'entr.;NUM;2019
+ENCTOT20;creation_histo;Créations d'entr.;NUM;2020
+ENCTOT21;creation_histo;Créations d'entr.;NUM;2021
+ENCTOT22;creation_histo;Créations d'entr.;NUM;2022
+ENCTOT23;creation_histo;Créations d'entr.;NUM;2023
+ENCTOT24;creation_histo;Créations d'entr.;NUM;2024
 ENNBE23;employment;Unités légales de l'industrie économiquement actives;NUM;2023
 ENNFZ23;employment;Unités légales de la construction économiquement actives;NUM;2023
 ENNGI23;employment;Unités légales de commerce, transp, restau, héberg. économiquement actives;NUM;2023
@@ -615,136 +615,136 @@ ETBE123;employment;Établissements industrie 1 à 9 salariés fin 2023;NUM;2023
 ETBE2023;employment;Établissements industrie 20 à 49 salariés fin 2023;NUM;2023
 ETBE23;employment;Établissements industrie fin 2023;NUM;2023
 ETBE5023;employment;Établissements industrie 50 salariés ou plus fin 2023;NUM;2023
-ETCBE12;creation_sectors;Créations d'ets de l'industrie;NUM;2012
-ETCBE13;creation_sectors;Créations d'ets de l'industrie;NUM;2013
-ETCBE14;creation_sectors;Créations d'ets de l'industrie;NUM;2014
-ETCBE15;creation_sectors;Créations d'ets de l'industrie;NUM;2015
-ETCBE16;creation_sectors;Créations d'ets de l'industrie;NUM;2016
-ETCBE17;creation_sectors;Créations d'ets de l'industrie;NUM;2017
-ETCBE18;creation_sectors;Créations d'ets de l'industrie;NUM;2018
-ETCBE19;creation_sectors;Créations d'ets de l'industrie;NUM;2019
-ETCBE20;creation_sectors;Créations d'ets de l'industrie;NUM;2020
-ETCBE21;creation_sectors;Créations d'ets de l'industrie;NUM;2021
-ETCBE22;creation_sectors;Créations d'ets de l'industrie;NUM;2022
-ETCBE23;creation_sectors;Créations d'ets de l'industrie;NUM;2023
-ETCBE24;creation_sectors;Créations d'ets de l'industrie;NUM;2024
-ETCFZ12;creation_sectors;Créations d'ets de la construction;NUM;2012
-ETCFZ13;creation_sectors;Créations d'ets de la construction;NUM;2013
-ETCFZ14;creation_sectors;Créations d'ets de la construction;NUM;2014
-ETCFZ15;creation_sectors;Créations d'ets de la construction;NUM;2015
-ETCFZ16;creation_sectors;Créations d'ets de la construction;NUM;2016
-ETCFZ17;creation_sectors;Créations d'ets de la construction;NUM;2017
-ETCFZ18;creation_sectors;Créations d'ets de la construction;NUM;2018
-ETCFZ19;creation_sectors;Créations d'ets de la construction;NUM;2019
-ETCFZ20;creation_sectors;Créations d'ets de la construction;NUM;2020
-ETCFZ21;creation_sectors;Créations d'ets de la construction;NUM;2021
-ETCFZ22;creation_sectors;Créations d'ets de la construction;NUM;2022
-ETCFZ23;creation_sectors;Créations d'ets de la construction;NUM;2023
-ETCFZ24;creation_sectors;Créations d'ets de la construction;NUM;2024
-ETCGI12;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2012
-ETCGI13;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2013
-ETCGI14;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2014
-ETCGI15;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2015
-ETCGI16;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2016
-ETCGI17;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2017
-ETCGI18;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2018
-ETCGI19;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2019
-ETCGI20;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2020
-ETCGI21;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2021
-ETCGI22;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2022
-ETCGI23;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2023
-ETCGI24;creation_sectors;Créations d'ets de comm, transp, restau héberg.;NUM;2024
-ETCJZ12;creation_sectors;Créations d'ets d’information et communication;NUM;2012
-ETCJZ13;creation_sectors;Créations d'ets d’information et communication;NUM;2013
-ETCJZ14;creation_sectors;Créations d'ets d’information et communication;NUM;2014
-ETCJZ15;creation_sectors;Créations d'ets d’information et communication;NUM;2015
-ETCJZ16;creation_sectors;Créations d'ets d’information et communication;NUM;2016
-ETCJZ17;creation_sectors;Créations d'ets d’information et communication;NUM;2017
-ETCJZ18;creation_sectors;Créations d'ets d’information et communication;NUM;2018
-ETCJZ19;creation_sectors;Créations d'ets d’information et communication;NUM;2019
-ETCJZ20;creation_sectors;Créations d'ets d’information et communication;NUM;2020
-ETCJZ21;creation_sectors;Créations d'ets d’information et communication;NUM;2021
-ETCJZ22;creation_sectors;Créations d'ets d’information et communication;NUM;2022
-ETCJZ23;creation_sectors;Créations d'ets d’information et communication;NUM;2023
-ETCJZ24;creation_sectors;Créations d'ets d’information et communication;NUM;2024
-ETCKZ12;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2012
-ETCKZ13;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2013
-ETCKZ14;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2014
-ETCKZ15;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2015
-ETCKZ16;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2016
-ETCKZ17;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2017
-ETCKZ18;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2018
-ETCKZ19;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2019
-ETCKZ20;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2020
-ETCKZ21;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2021
-ETCKZ22;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2022
-ETCKZ23;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2023
-ETCKZ24;creation_sectors;Créations d'ets d’activités financières et d'assurance;NUM;2024
-ETCLZ12;creation_sectors;Créations d'ets d’activités immobilières;NUM;2012
-ETCLZ13;creation_sectors;Créations d'ets d’activités immobilières;NUM;2013
-ETCLZ14;creation_sectors;Créations d'ets d’activités immobilières;NUM;2014
-ETCLZ15;creation_sectors;Créations d'ets d’activités immobilières;NUM;2015
-ETCLZ16;creation_sectors;Créations d'ets d’activités immobilières;NUM;2016
-ETCLZ17;creation_sectors;Créations d'ets d’activités immobilières;NUM;2017
-ETCLZ18;creation_sectors;Créations d'ets d’activités immobilières;NUM;2018
-ETCLZ19;creation_sectors;Créations d'ets d’activités immobilières;NUM;2019
-ETCLZ20;creation_sectors;Créations d'ets d’activités immobilières;NUM;2020
-ETCLZ21;creation_sectors;Créations d'ets d’activités immobilières;NUM;2021
-ETCLZ22;creation_sectors;Créations d'ets d’activités immobilières;NUM;2022
-ETCLZ23;creation_sectors;Créations d'ets d’activités immobilières;NUM;2023
-ETCLZ24;creation_sectors;Créations d'ets d’activités immobilières;NUM;2024
-ETCMN12;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2012
-ETCMN13;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2013
-ETCMN14;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2014
-ETCMN15;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2015
-ETCMN16;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2016
-ETCMN17;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2017
-ETCMN18;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2018
-ETCMN19;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2019
-ETCMN20;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2020
-ETCMN21;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2021
-ETCMN22;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2022
-ETCMN23;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2023
-ETCMN24;creation_sectors;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2024
-ETCOQ12;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2012
-ETCOQ13;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2013
-ETCOQ14;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2014
-ETCOQ15;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2015
-ETCOQ16;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2016
-ETCOQ17;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2017
-ETCOQ18;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2018
-ETCOQ19;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2019
-ETCOQ20;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2020
-ETCOQ21;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2021
-ETCOQ22;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2022
-ETCOQ23;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2023
-ETCOQ24;creation_sectors;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2024
-ETCRU12;creation_sectors;Créations d'ets des autres activités de services;NUM;2012
-ETCRU13;creation_sectors;Créations d'ets des autres activités de services;NUM;2013
-ETCRU14;creation_sectors;Créations d'ets des autres activités de services;NUM;2014
-ETCRU15;creation_sectors;Créations d'ets des autres activités de services;NUM;2015
-ETCRU16;creation_sectors;Créations d'ets des autres activités de services;NUM;2016
-ETCRU17;creation_sectors;Créations d'ets des autres activités de services;NUM;2017
-ETCRU18;creation_sectors;Créations d'ets des autres activités de services;NUM;2018
-ETCRU19;creation_sectors;Créations d'ets des autres activités de services;NUM;2019
-ETCRU20;creation_sectors;Créations d'ets des autres activités de services;NUM;2020
-ETCRU21;creation_sectors;Créations d'ets des autres activités de services;NUM;2021
-ETCRU22;creation_sectors;Créations d'ets des autres activités de services;NUM;2022
-ETCRU23;creation_sectors;Créations d'ets des autres activités de services;NUM;2023
-ETCRU24;creation_sectors;Créations d'ets des autres activités de services;NUM;2024
-ETCTOT12;creation_sectors;Créations d'ets;NUM;2012
-ETCTOT13;creation_sectors;Créations d'ets;NUM;2013
-ETCTOT14;creation_sectors;Créations d'ets;NUM;2014
-ETCTOT15;creation_sectors;Créations d'ets;NUM;2015
-ETCTOT16;creation_sectors;Créations d'ets;NUM;2016
-ETCTOT17;creation_sectors;Créations d'ets;NUM;2017
-ETCTOT18;creation_sectors;Créations d'ets;NUM;2018
-ETCTOT19;creation_sectors;Créations d'ets;NUM;2019
-ETCTOT20;creation_sectors;Créations d'ets;NUM;2020
-ETCTOT21;creation_sectors;Créations d'ets;NUM;2021
-ETCTOT22;creation_sectors;Créations d'ets;NUM;2022
-ETCTOT23;creation_sectors;Créations d'ets;NUM;2023
-ETCTOT24;creation_sectors;Créations d'ets;NUM;2024
+ETCBE12;creation_histo;Créations d'ets de l'industrie;NUM;2012
+ETCBE13;creation_histo;Créations d'ets de l'industrie;NUM;2013
+ETCBE14;creation_histo;Créations d'ets de l'industrie;NUM;2014
+ETCBE15;creation_histo;Créations d'ets de l'industrie;NUM;2015
+ETCBE16;creation_histo;Créations d'ets de l'industrie;NUM;2016
+ETCBE17;creation_histo;Créations d'ets de l'industrie;NUM;2017
+ETCBE18;creation_histo;Créations d'ets de l'industrie;NUM;2018
+ETCBE19;creation_histo;Créations d'ets de l'industrie;NUM;2019
+ETCBE20;creation_histo;Créations d'ets de l'industrie;NUM;2020
+ETCBE21;creation_histo;Créations d'ets de l'industrie;NUM;2021
+ETCBE22;creation_histo;Créations d'ets de l'industrie;NUM;2022
+ETCBE23;creation_histo;Créations d'ets de l'industrie;NUM;2023
+ETCBE24;creation_histo;Créations d'ets de l'industrie;NUM;2024
+ETCFZ12;creation_histo;Créations d'ets de la construction;NUM;2012
+ETCFZ13;creation_histo;Créations d'ets de la construction;NUM;2013
+ETCFZ14;creation_histo;Créations d'ets de la construction;NUM;2014
+ETCFZ15;creation_histo;Créations d'ets de la construction;NUM;2015
+ETCFZ16;creation_histo;Créations d'ets de la construction;NUM;2016
+ETCFZ17;creation_histo;Créations d'ets de la construction;NUM;2017
+ETCFZ18;creation_histo;Créations d'ets de la construction;NUM;2018
+ETCFZ19;creation_histo;Créations d'ets de la construction;NUM;2019
+ETCFZ20;creation_histo;Créations d'ets de la construction;NUM;2020
+ETCFZ21;creation_histo;Créations d'ets de la construction;NUM;2021
+ETCFZ22;creation_histo;Créations d'ets de la construction;NUM;2022
+ETCFZ23;creation_histo;Créations d'ets de la construction;NUM;2023
+ETCFZ24;creation_histo;Créations d'ets de la construction;NUM;2024
+ETCGI12;creation_histo;Créations d'ets de comm, transp, restau héberg.;NUM;2012
+ETCGI13;creation_histo;Créations d'ets de comm, transp, restau héberg.;NUM;2013
+ETCGI14;creation_histo;Créations d'ets de comm, transp, restau héberg.;NUM;2014
+ETCGI15;creation_histo;Créations d'ets de comm, transp, restau héberg.;NUM;2015
+ETCGI16;creation_histo;Créations d'ets de comm, transp, restau héberg.;NUM;2016
+ETCGI17;creation_histo;Créations d'ets de comm, transp, restau héberg.;NUM;2017
+ETCGI18;creation_histo;Créations d'ets de comm, transp, restau héberg.;NUM;2018
+ETCGI19;creation_histo;Créations d'ets de comm, transp, restau héberg.;NUM;2019
+ETCGI20;creation_histo;Créations d'ets de comm, transp, restau héberg.;NUM;2020
+ETCGI21;creation_histo;Créations d'ets de comm, transp, restau héberg.;NUM;2021
+ETCGI22;creation_histo;Créations d'ets de comm, transp, restau héberg.;NUM;2022
+ETCGI23;creation_histo;Créations d'ets de comm, transp, restau héberg.;NUM;2023
+ETCGI24;creation_histo;Créations d'ets de comm, transp, restau héberg.;NUM;2024
+ETCJZ12;creation_histo;Créations d'ets d’information et communication;NUM;2012
+ETCJZ13;creation_histo;Créations d'ets d’information et communication;NUM;2013
+ETCJZ14;creation_histo;Créations d'ets d’information et communication;NUM;2014
+ETCJZ15;creation_histo;Créations d'ets d’information et communication;NUM;2015
+ETCJZ16;creation_histo;Créations d'ets d’information et communication;NUM;2016
+ETCJZ17;creation_histo;Créations d'ets d’information et communication;NUM;2017
+ETCJZ18;creation_histo;Créations d'ets d’information et communication;NUM;2018
+ETCJZ19;creation_histo;Créations d'ets d’information et communication;NUM;2019
+ETCJZ20;creation_histo;Créations d'ets d’information et communication;NUM;2020
+ETCJZ21;creation_histo;Créations d'ets d’information et communication;NUM;2021
+ETCJZ22;creation_histo;Créations d'ets d’information et communication;NUM;2022
+ETCJZ23;creation_histo;Créations d'ets d’information et communication;NUM;2023
+ETCJZ24;creation_histo;Créations d'ets d’information et communication;NUM;2024
+ETCKZ12;creation_histo;Créations d'ets d’activités financières et d'assurance;NUM;2012
+ETCKZ13;creation_histo;Créations d'ets d’activités financières et d'assurance;NUM;2013
+ETCKZ14;creation_histo;Créations d'ets d’activités financières et d'assurance;NUM;2014
+ETCKZ15;creation_histo;Créations d'ets d’activités financières et d'assurance;NUM;2015
+ETCKZ16;creation_histo;Créations d'ets d’activités financières et d'assurance;NUM;2016
+ETCKZ17;creation_histo;Créations d'ets d’activités financières et d'assurance;NUM;2017
+ETCKZ18;creation_histo;Créations d'ets d’activités financières et d'assurance;NUM;2018
+ETCKZ19;creation_histo;Créations d'ets d’activités financières et d'assurance;NUM;2019
+ETCKZ20;creation_histo;Créations d'ets d’activités financières et d'assurance;NUM;2020
+ETCKZ21;creation_histo;Créations d'ets d’activités financières et d'assurance;NUM;2021
+ETCKZ22;creation_histo;Créations d'ets d’activités financières et d'assurance;NUM;2022
+ETCKZ23;creation_histo;Créations d'ets d’activités financières et d'assurance;NUM;2023
+ETCKZ24;creation_histo;Créations d'ets d’activités financières et d'assurance;NUM;2024
+ETCLZ12;creation_histo;Créations d'ets d’activités immobilières;NUM;2012
+ETCLZ13;creation_histo;Créations d'ets d’activités immobilières;NUM;2013
+ETCLZ14;creation_histo;Créations d'ets d’activités immobilières;NUM;2014
+ETCLZ15;creation_histo;Créations d'ets d’activités immobilières;NUM;2015
+ETCLZ16;creation_histo;Créations d'ets d’activités immobilières;NUM;2016
+ETCLZ17;creation_histo;Créations d'ets d’activités immobilières;NUM;2017
+ETCLZ18;creation_histo;Créations d'ets d’activités immobilières;NUM;2018
+ETCLZ19;creation_histo;Créations d'ets d’activités immobilières;NUM;2019
+ETCLZ20;creation_histo;Créations d'ets d’activités immobilières;NUM;2020
+ETCLZ21;creation_histo;Créations d'ets d’activités immobilières;NUM;2021
+ETCLZ22;creation_histo;Créations d'ets d’activités immobilières;NUM;2022
+ETCLZ23;creation_histo;Créations d'ets d’activités immobilières;NUM;2023
+ETCLZ24;creation_histo;Créations d'ets d’activités immobilières;NUM;2024
+ETCMN12;creation_histo;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2012
+ETCMN13;creation_histo;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2013
+ETCMN14;creation_histo;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2014
+ETCMN15;creation_histo;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2015
+ETCMN16;creation_histo;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2016
+ETCMN17;creation_histo;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2017
+ETCMN18;creation_histo;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2018
+ETCMN19;creation_histo;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2019
+ETCMN20;creation_histo;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2020
+ETCMN21;creation_histo;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2021
+ETCMN22;creation_histo;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2022
+ETCMN23;creation_histo;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2023
+ETCMN24;creation_histo;Créations d'ets d’activités spécialisées, scient et techn, et activités de serv adm et de soutien;NUM;2024
+ETCOQ12;creation_histo;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2012
+ETCOQ13;creation_histo;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2013
+ETCOQ14;creation_histo;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2014
+ETCOQ15;creation_histo;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2015
+ETCOQ16;creation_histo;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2016
+ETCOQ17;creation_histo;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2017
+ETCOQ18;creation_histo;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2018
+ETCOQ19;creation_histo;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2019
+ETCOQ20;creation_histo;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2020
+ETCOQ21;creation_histo;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2021
+ETCOQ22;creation_histo;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2022
+ETCOQ23;creation_histo;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2023
+ETCOQ24;creation_histo;Créations d'ets du secteur adm publ, enseign, santé et action sociale;NUM;2024
+ETCRU12;creation_histo;Créations d'ets des autres activités de services;NUM;2012
+ETCRU13;creation_histo;Créations d'ets des autres activités de services;NUM;2013
+ETCRU14;creation_histo;Créations d'ets des autres activités de services;NUM;2014
+ETCRU15;creation_histo;Créations d'ets des autres activités de services;NUM;2015
+ETCRU16;creation_histo;Créations d'ets des autres activités de services;NUM;2016
+ETCRU17;creation_histo;Créations d'ets des autres activités de services;NUM;2017
+ETCRU18;creation_histo;Créations d'ets des autres activités de services;NUM;2018
+ETCRU19;creation_histo;Créations d'ets des autres activités de services;NUM;2019
+ETCRU20;creation_histo;Créations d'ets des autres activités de services;NUM;2020
+ETCRU21;creation_histo;Créations d'ets des autres activités de services;NUM;2021
+ETCRU22;creation_histo;Créations d'ets des autres activités de services;NUM;2022
+ETCRU23;creation_histo;Créations d'ets des autres activités de services;NUM;2023
+ETCRU24;creation_histo;Créations d'ets des autres activités de services;NUM;2024
+ETCTOT12;creation_histo;Créations d'ets;NUM;2012
+ETCTOT13;creation_histo;Créations d'ets;NUM;2013
+ETCTOT14;creation_histo;Créations d'ets;NUM;2014
+ETCTOT15;creation_histo;Créations d'ets;NUM;2015
+ETCTOT16;creation_histo;Créations d'ets;NUM;2016
+ETCTOT17;creation_histo;Créations d'ets;NUM;2017
+ETCTOT18;creation_histo;Créations d'ets;NUM;2018
+ETCTOT19;creation_histo;Créations d'ets;NUM;2019
+ETCTOT20;creation_histo;Créations d'ets;NUM;2020
+ETCTOT21;creation_histo;Créations d'ets;NUM;2021
+ETCTOT22;creation_histo;Créations d'ets;NUM;2022
+ETCTOT23;creation_histo;Créations d'ets;NUM;2023
+ETCTOT24;creation_histo;Créations d'ets;NUM;2024
 ETFZ023;employment;Établissements construction sans salarié fin 2023;NUM;2023
 ETFZ1023;employment;Établissements construction 10 à 19 salariés fin 2023;NUM;2023
 ETFZ123;employment;Établissements construction 1 à 9 salariés fin 2023;NUM;2023
@@ -823,20 +823,20 @@ ETTEF123;employment;Établissements de 1 à 9 salariés fin 2023;NUM;2023
 ETTEF2023;employment;Établissements de 20 à 49 salariés fin 2023;NUM;2023
 ETTEF5023;employment;Établissements de 50 salariés ou plus fin 2023;NUM;2023
 ETTOT23;employment;Total Ets fin 2023;NUM;2023
-HT025;tourism_accommodations;Hôtels non classés;NUM;2025
-HT125;tourism_accommodations;Hôtels classés 1 étoile;NUM;2025
-HT225;tourism_accommodations;Hôtels classés 2 étoiles;NUM;2025
-HT25;tourism_accommodations;Hôtels;NUM;2025
-HT325;tourism_accommodations;Hôtels classés 3 étoiles;NUM;2025
-HT425;tourism_accommodations;Hôtels classés 4 étoiles;NUM;2025
-HT525;tourism_accommodations;Hôtels classés 5 étoiles;NUM;2025
-HTCH025;tourism_accommodations;Chambres dans hôtels non classés;NUM;2025
-HTCH125;tourism_accommodations;Chambres dans hôtels classés 1 étoile;NUM;2025
-HTCH225;tourism_accommodations;Chambres dans hôtels classés 2 étoiles;NUM;2025
-HTCH25;tourism_accommodations;Chambres dans hôtels;NUM;2025
-HTCH325;tourism_accommodations;Chambres dans hôtels classés 3 étoiles;NUM;2025
-HTCH425;tourism_accommodations;Chambres dans hôtels classés 4 étoiles;NUM;2025
-HTCH525;tourism_accommodations;Chambres dans hôtels classés 5 étoiles;NUM;2025
+HT026;tourism_accommodations;Hôtels non classés;NUM;2025
+HT126;tourism_accommodations;Hôtels classés 1 étoile;NUM;2025
+HT226;tourism_accommodations;Hôtels classés 2 étoiles;NUM;2025
+HT26;tourism_accommodations;Hôtels;NUM;2025
+HT326;tourism_accommodations;Hôtels classés 3 étoiles;NUM;2025
+HT426;tourism_accommodations;Hôtels classés 4 étoiles;NUM;2025
+HT526;tourism_accommodations;Hôtels classés 5 étoiles;NUM;2025
+HTCH026;tourism_accommodations;Chambres dans hôtels non classés;NUM;2025
+HTCH126;tourism_accommodations;Chambres dans hôtels classés 1 étoile;NUM;2025
+HTCH226;tourism_accommodations;Chambres dans hôtels classés 2 étoiles;NUM;2025
+HTCH26;tourism_accommodations;Chambres dans hôtels;NUM;2025
+HTCH326;tourism_accommodations;Chambres dans hôtels classés 3 étoiles;NUM;2025
+HTCH426;tourism_accommodations;Chambres dans hôtels classés 4 étoiles;NUM;2025
+HTCH526;tourism_accommodations;Chambres dans hôtels classés 5 étoiles;NUM;2025
 MED21;fiscal;Médiane du niveau vie (€);NUM;2021
 NAISD14;births_deaths;Naissances domiciliées;NUM;2014
 NAISD15;births_deaths;Naissances domiciliées;NUM;2015
@@ -1912,39 +1912,39 @@ PPMINI21;fiscal;dont part des minima sociaux (%);NUM;2021
 PPSOC21;fiscal;Part de l'ensemble des prestations sociales (%);NUM;2021
 PTSA21;fiscal;dont part des salaires et traitements (%);NUM;2021
 RD21;fiscal;Rapport interdécile 9e décile/1er décile;NUM;2021
-RT25;tourism_accommodations;Résidences de tourisme;NUM;2025
-RTLIT25;tourism_accommodations;Lits dans Résidences de tourisme;NUM;2025
-RTUH25;tourism_accommodations;Unités d'hébergements dans Résidences de tourisme;NUM;2025
+RT26;tourism_accommodations;Résidences de tourisme;NUM;2025
+RTLIT26;tourism_accommodations;Lits dans Résidences de tourisme;NUM;2025
+RTUH26;tourism_accommodations;Unités d'hébergements dans Résidences de tourisme;NUM;2025
 SNEMM_23;fiscal;Salaire net EQTP mensuel moyen (€);NUM;2023
-SNEMM_AGE_Y25T39_23;fiscal;Salaire net EQTP mensuel moyen  25-39 ans (€);NUM;2023
-SNEMM_AGE_Y40T49_23;fiscal;Salaire net EQTP mensuel moyen  40-49 ans (€);NUM;2023
-SNEMM_AGE_Y50T54_23;fiscal;Salaire net EQTP mensuel moyen  50-54 ans (€);NUM;2023
-SNEMM_AGE_Y_GE55_23;fiscal;Salaire net EQTP mensuel moyen  55+ ans (€);NUM;2023
-SNEMM_AGE_Y_LT25_23;fiscal;Salaire net EQTP mensuel moyen  <25 ans (€);NUM;2023
-SNEMM_PCS_ESE_1T3_23;fiscal;Salaire net EQTP mensuel moyen  cadres sup. (€);NUM;2023
-SNEMM_PCS_ESE_4_23;fiscal;Salaire net EQTP mensuel moyen  prof inter. (€);NUM;2023
-SNEMM_PCS_ESE_5_23;fiscal;Salaire net EQTP mensuel moyen  employés (€);NUM;2023
-SNEMM_PCS_ESE_6_23;fiscal;Salaire net EQTP mensuel moyen  ouvriers (€);NUM;2023
-SNEMM_SEX_F_23;fiscal;Salaire net EQTP mensuel moyen  F (€);NUM;2023
-SNEMM_SEX_F_AGE_Y25T39_23;fiscal;Salaire net EQTP mensuel moyen  F 25-39 ans (€);NUM;2023
-SNEMM_SEX_F_AGE_Y40T49_23;fiscal;Salaire net EQTP mensuel moyen  F 40-49 ans (€);NUM;2023
-SNEMM_SEX_F_AGE_Y50T54_23;fiscal;Salaire net EQTP mensuel moyen  F 50-54 ans (€);NUM;2023
-SNEMM_SEX_F_AGE_Y_GE55_23;fiscal;Salaire net EQTP mensuel moyen  F 55+ ans (€);NUM;2023
-SNEMM_SEX_F_AGE_Y_LT25_23;fiscal;Salaire net EQTP mensuel moyen  F <25 ans (€);NUM;2023
-SNEMM_SEX_F_PCS_ESE_1T3_23;fiscal;Salaire net EQTP mensuel moyen  F cadres sup. (€);NUM;2023
-SNEMM_SEX_F_PCS_ESE_4_23;fiscal;Salaire net EQTP mensuel moyen  F prof inter. (€);NUM;2023
-SNEMM_SEX_F_PCS_ESE_5_23;fiscal;Salaire net EQTP mensuel moyen  F employés (€);NUM;2023
-SNEMM_SEX_F_PCS_ESE_6_23;fiscal;Salaire net EQTP mensuel moyen  F ouvriers (€);NUM;2023
-SNEMM_SEX_M_23;fiscal;Salaire net EQTP mensuel moyen  H (€);NUM;2023
-SNEMM_SEX_M_AGE_Y25T39_23;fiscal;Salaire net EQTP mensuel moyen  H 25-39 ans (€);NUM;2023
-SNEMM_SEX_M_AGE_Y40T49_23;fiscal;Salaire net EQTP mensuel moyen  H 40-49 ans (€);NUM;2023
-SNEMM_SEX_M_AGE_Y50T54_23;fiscal;Salaire net EQTP mensuel moyen  H 50-54 ans (€);NUM;2023
-SNEMM_SEX_M_AGE_Y_GE55_23;fiscal;Salaire net EQTP mensuel moyen  H 55+ ans (€);NUM;2023
-SNEMM_SEX_M_AGE_Y_LT25_23;fiscal;Salaire net EQTP mensuel moyen  H <25 ans (€);NUM;2023
-SNEMM_SEX_M_PCS_ESE_1T3_23;fiscal;Salaire net EQTP mensuel moyen  H cadres sup. (€);NUM;2023
-SNEMM_SEX_M_PCS_ESE_4_23;fiscal;Salaire net EQTP mensuel moyen  H prof inter. (€);NUM;2023
-SNEMM_SEX_M_PCS_ESE_5_23;fiscal;Salaire net EQTP mensuel moyen  H employés (€);NUM;2023
-SNEMM_SEX_M_PCS_ESE_6_23;fiscal;Salaire net EQTP mensuel moyen  H ouvriers (€);NUM;2023
+SNEMM_AGE_Y25T39_23;fiscal;Salaire net EQTP mensuel moyen 25-39 ans (€);NUM;2023
+SNEMM_AGE_Y40T49_23;fiscal;Salaire net EQTP mensuel moyen 40-49 ans (€);NUM;2023
+SNEMM_AGE_Y50T54_23;fiscal;Salaire net EQTP mensuel moyen 50-54 ans (€);NUM;2023
+SNEMM_AGE_Y_GE55_23;fiscal;Salaire net EQTP mensuel moyen 55+ ans (€);NUM;2023
+SNEMM_AGE_Y_LT25_23;fiscal;Salaire net EQTP mensuel moyen <25 ans (€);NUM;2023
+SNEMM_PCS_ESE_1T3_23;fiscal;Salaire net EQTP mensuel moyen cadres sup. (€);NUM;2023
+SNEMM_PCS_ESE_4_23;fiscal;Salaire net EQTP mensuel moyen prof inter. (€);NUM;2023
+SNEMM_PCS_ESE_5_23;fiscal;Salaire net EQTP mensuel moyen employés (€);NUM;2023
+SNEMM_PCS_ESE_6_23;fiscal;Salaire net EQTP mensuel moyen ouvriers (€);NUM;2023
+SNEMM_SEX_F_23;fiscal;Salaire net EQTP mensuel moyen F (€);NUM;2023
+SNEMM_SEX_F_AGE_Y25T39_23;fiscal;Salaire net EQTP mensuel moyen F 25-39 ans (€);NUM;2023
+SNEMM_SEX_F_AGE_Y40T49_23;fiscal;Salaire net EQTP mensuel moyen F 40-49 ans (€);NUM;2023
+SNEMM_SEX_F_AGE_Y50T54_23;fiscal;Salaire net EQTP mensuel moyen F 50-54 ans (€);NUM;2023
+SNEMM_SEX_F_AGE_Y_GE55_23;fiscal;Salaire net EQTP mensuel moyen F 55+ ans (€);NUM;2023
+SNEMM_SEX_F_AGE_Y_LT25_23;fiscal;Salaire net EQTP mensuel moyen F <25 ans (€);NUM;2023
+SNEMM_SEX_F_PCS_ESE_1T3_23;fiscal;Salaire net EQTP mensuel moyen F cadres sup. (€);NUM;2023
+SNEMM_SEX_F_PCS_ESE_4_23;fiscal;Salaire net EQTP mensuel moyen F prof inter. (€);NUM;2023
+SNEMM_SEX_F_PCS_ESE_5_23;fiscal;Salaire net EQTP mensuel moyen F employés (€);NUM;2023
+SNEMM_SEX_F_PCS_ESE_6_23;fiscal;Salaire net EQTP mensuel moyen F ouvriers (€);NUM;2023
+SNEMM_SEX_M_23;fiscal;Salaire net EQTP mensuel moyen H (€);NUM;2023
+SNEMM_SEX_M_AGE_Y25T39_23;fiscal;Salaire net EQTP mensuel moyen H 25-39 ans (€);NUM;2023
+SNEMM_SEX_M_AGE_Y40T49_23;fiscal;Salaire net EQTP mensuel moyen H 40-49 ans (€);NUM;2023
+SNEMM_SEX_M_AGE_Y50T54_23;fiscal;Salaire net EQTP mensuel moyen H 50-54 ans (€);NUM;2023
+SNEMM_SEX_M_AGE_Y_GE55_23;fiscal;Salaire net EQTP mensuel moyen H 55+ ans (€);NUM;2023
+SNEMM_SEX_M_AGE_Y_LT25_23;fiscal;Salaire net EQTP mensuel moyen H <25 ans (€);NUM;2023
+SNEMM_SEX_M_PCS_ESE_1T3_23;fiscal;Salaire net EQTP mensuel moyen H cadres sup. (€);NUM;2023
+SNEMM_SEX_M_PCS_ESE_4_23;fiscal;Salaire net EQTP mensuel moyen H prof inter. (€);NUM;2023
+SNEMM_SEX_M_PCS_ESE_5_23;fiscal;Salaire net EQTP mensuel moyen H employés (€);NUM;2023
+SNEMM_SEX_M_PCS_ESE_6_23;fiscal;Salaire net EQTP mensuel moyen H ouvriers (€);NUM;2023
 TP6021;fiscal;Taux de pauvreté-Ensemble (%);NUM;2021
 TP60AGE121;fiscal;Taux de pauvreté-moins de 30 ans (%);NUM;2021
 TP60AGE221;fiscal;Taux de pauvreté-30 à 39 ans  (%);NUM;2021
@@ -1954,6 +1954,8 @@ TP60AGE521;fiscal;Taux de pauvreté-60 à 74 ans (%);NUM;2021
 TP60AGE621;fiscal;Taux de pauvreté-75 ans ou plus (%);NUM;2021
 TP60TOL121;fiscal;Taux de pauvreté-propriétaires (%);NUM;2021
 TP60TOL221;fiscal;Taux de pauvreté-locataires (%);NUM;2021
-VV25;tourism_accommodations;Villages vacances;NUM;2025
-VVLIT25;tourism_accommodations;Lits dans Villages vacances;NUM;2025
-VVUH25;tourism_accommodations;Unités d'hébergements dans Villages vacances;NUM;2025
+VV26;tourism_accommodations;Villages vacances;NUM;2025
+VVLIT26;tourism_accommodations;Lits dans Villages vacances;NUM;2025
+VVUH26;tourism_accommodations;Unités d'hébergements dans Villages vacances;NUM;2025
+ENCITOT24;creation_entreprises;Créations d'entr. ind.;NUM;2024
+ENCTOT24;creation_entreprises;Créations d'entr.;NUM;2024

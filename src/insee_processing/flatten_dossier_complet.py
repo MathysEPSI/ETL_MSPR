@@ -53,6 +53,7 @@ def _filter_mapping_to_raw(mapping_df: pd.DataFrame, raw_columns: Set[str]) -> T
     missing_in_raw = set(mapping_df["source_code"]) - raw_columns
     if missing_in_raw:
         print(f"Warning: {len(missing_in_raw)} source_code values not found in raw data.")
+        print(missing_in_raw)
     filtered_mapping = mapping_df[mapping_df["source_code"].isin(raw_columns)].copy()
     return filtered_mapping, missing_in_raw
 
@@ -64,6 +65,7 @@ def _warn_missing_in_meta(mapping_df: pd.DataFrame, meta_df: pd.DataFrame) -> No
     missing_in_meta = set(mapping_df["source_code"]) - set(meta_df["COD_VAR"].astype(str))
     if missing_in_meta:
         print(f"Warning: {len(missing_in_meta)} source_code values not found in meta file.")
+        print(missing_in_meta)
 
 
 def _read_raw_data(
