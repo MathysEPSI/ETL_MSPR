@@ -25,7 +25,7 @@ python -m src.preprocessing.run_pipeline --input data --year all --format parque
 - `--year` / `--years` : `all` par défaut, ou liste séparée par des virgules
 - `--strict` : échoue si un jeu de données attendu manque dans le dossier
 
-## Outputs
+### Outputs
 Le format final contient 16 colonnes harmonisées :
 
 - métadonnées d’élection : `annee_election`, `tour`
@@ -33,7 +33,7 @@ Le format final contient 16 colonnes harmonisées :
 - agrégats commune : `inscrits`, `abstentions`, `votants`, `blancs_nuls`, `exprimes`
 - ligne résultat : `code_nuance`, `nom`, `prenom`, `liste`, `voix`
 
-## Tables de fait & dimensions
+### Tables de fait & dimensions
 Le fichier `processed_data/elections_flat.csv` peut être transformé en modèle en étoile.
 
 Tables générées :
